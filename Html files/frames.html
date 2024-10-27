@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Frames Example</title>
+    <style>
+        /* Basic styling for layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+        }
+
+        /* Navigation Frame styling */
+        #navigation {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 10px;
+            box-sizing: border-box;
+            border-right: 1px solid #ccc;
+        }
+
+        #navigation a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        #navigation a:hover {
+            background-color: #ddd;
+        }
+
+        /* Main Content Frame styling */
+        #main-content {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Floating Frame styling */
+        #floating-frame {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Frame -->
+    <div id="navigation">
+        <h3>Navigation</h3>
+        <a href="content1.html" target="main-content">Content 1</a>
+        <a href="content2.html" target="main-content">Content 2</a>
+        <a href="content3.html" target="main-content">Content 3</a>
+    </div>
+
+    <!-- Main Content Frame -->
+    <div id="main-content">
+        <h2>Main Content Area</h2>
+        <p>This is the main content section where pages from the navigation frame will be displayed.</p>
+
+        <!-- Floating Frame (iframe) -->
+        <h3>Embedded External Page (Floating Frame)</h3>
+        <iframe id="floating-frame" src="https://www.example.com" title="Floating Frame"></iframe>
+    </div>
+
+</body>
+</html>
