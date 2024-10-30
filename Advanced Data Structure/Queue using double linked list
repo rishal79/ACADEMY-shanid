@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define the structure of a node in the doubly linked list
 struct Node {
     int data;
     struct Node* prev;
     struct Node* next;
 };
 
-// Function to create a new node
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -17,7 +15,6 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-// Function to insert at the beginning
 void insertAtBeginning(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
     newNode->next = *head;
@@ -26,7 +23,6 @@ void insertAtBeginning(struct Node** head, int data) {
     *head = newNode;
 }
 
-// Function to insert at the end
 void insertAtEnd(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
     if (*head == NULL) {
@@ -40,14 +36,15 @@ void insertAtEnd(struct Node** head, int data) {
     newNode->prev = temp;
 }
 
-// Function to insert after a specific position
+
 void insertAfterPosition(struct Node** head, int data, int position) {
+int i;
     if (*head == NULL || position < 1) {
         printf("Position is out of range\n");
         return;
     }
     struct Node* temp = *head;
-    for (int i = 1; i < position && temp != NULL; i++)
+    for (i = 1; i < position && temp != NULL; i++)
         temp = temp->next;
     if (temp == NULL) {
         printf("Position is out of range\n");
@@ -61,7 +58,7 @@ void insertAfterPosition(struct Node** head, int data, int position) {
     newNode->prev = temp;
 }
 
-// Function to delete a node at the beginning
+
 void deleteAtBeginning(struct Node** head) {
     if (*head == NULL) {
         printf("List is empty\n");
@@ -74,7 +71,7 @@ void deleteAtBeginning(struct Node** head) {
     free(temp);
 }
 
-// Function to delete a node at the end
+
 void deleteAtEnd(struct Node** head) {
     if (*head == NULL) {
         printf("List is empty\n");
@@ -90,14 +87,14 @@ void deleteAtEnd(struct Node** head) {
     free(temp);
 }
 
-// Function to delete a node at a specific position
 void deleteAtPosition(struct Node** head, int position) {
+int i;
     if (*head == NULL || position < 1) {
         printf("Position is out of range\n");
         return;
     }
     struct Node* temp = *head;
-    for (int i = 1; i < position && temp != NULL; i++)
+    for (i = 1; i < position && temp != NULL; i++)
         temp = temp->next;
     if (temp == NULL) {
         printf("Position is out of range\n");
@@ -112,7 +109,7 @@ void deleteAtPosition(struct Node** head, int position) {
     free(temp);
 }
 
-// Function to display the doubly linked list
+
 void displayList(struct Node* head) {
     struct Node* temp = head;
     while (temp != NULL) {
@@ -122,7 +119,6 @@ void displayList(struct Node* head) {
     printf("\n");
 }
 
-// Main function with user input
 int main() {
     struct Node* head = NULL;
     int choice, data, position;
