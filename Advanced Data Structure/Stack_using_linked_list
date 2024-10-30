@@ -1,7 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
-#include <malloc.h>
-
+#include<stdlib.h>
 struct stack {
     int data;
     struct stack *next;
@@ -15,8 +13,6 @@ struct stack *pop(struct stack *);
 
 int main() {
     int val, option;
-    clrscr();
-
     do {
         printf("\nMAIN MENU");
         printf("\n 1. PUSH");
@@ -44,8 +40,6 @@ int main() {
                 printf("Invalid choice");
         }
     } while(option != 4);
-
-    getch();
     return 0;
 }
 
