@@ -37,12 +37,13 @@ struct Node* insertAtEnd(struct Node* head, int data) {
 }
 
 struct Node* insertAfterPosition(struct Node* head, int data, int position) {
-    if (head == NULL || position < 1) {
+    int i;
+if (head == NULL || position < 1) {
         printf("Position out of range\n");
         return head;
     }
     struct Node* temp = head;
-    for (int i = 1; i < position && temp != NULL; i++)
+    for (i = 1; i < position && temp != NULL; i++)
         temp = temp->next;
     if (temp == NULL) {
         printf("Position out of range\n");
@@ -87,12 +88,13 @@ struct Node* deleteAtEnd(struct Node* head) {
 }
 
 struct Node* deleteAtPosition(struct Node* head, int position) {
-    if (head == NULL || position < 1) {
+   int i;
+if (head == NULL || position < 1) {
         printf("Position out of range\n");
         return head;
     }
     struct Node* temp = head;
-    for (int i = 1; i < position && temp != NULL; i++)
+    for (i = 1; i < position && temp != NULL; i++)
         temp = temp->next;
     if (temp == NULL) {
         printf("Position out of range\n");
