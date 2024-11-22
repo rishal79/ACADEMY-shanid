@@ -46,11 +46,12 @@ void dequeue() {
 }
 
 void display() {
+int i;
     if (isEmpty()) {
         printf("Queue is empty! Nothing to display.\n");
     } else {
         printf("Queue elements: ");
-        int i = front;
+         i = front;
         while (i != rear) {
             printf("%d ", queue[i]);
             i = (i + 1) % MAX;
