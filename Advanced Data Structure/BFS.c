@@ -5,7 +5,7 @@
 #define MAX 100
 
 void bfs(int adj[MAX][MAX], int V, int s) {
-    int curr;
+    int curr,i;
     int q[MAX], front = 0, rear = 0;    
     bool visited[MAX] = { false };
     visited[s] = true;
@@ -14,7 +14,7 @@ void bfs(int adj[MAX][MAX], int V, int s) {
     while (front < rear) {
         curr = q[front++];
         printf("%d ", curr);
-        for (int i = 0; i < V; i++) {
+        for (i = 0; i < V; i++) {
             if (adj[curr][i] == 1 && !visited[i]) {
                 visited[i] = true;
                 q[rear++] = i;
