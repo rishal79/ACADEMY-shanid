@@ -4,10 +4,11 @@
 #define MAX 100
 
 void dfs(int adj[MAX][MAX], int V, int s, bool visited[MAX]) {
+    int i;
     printf("%d ", s);
     visited[s] = true;
 
-    for (int i = 0; i < V; i++) {
+    for (i = 0; i < V; i++) {
         if (adj[s][i] && !visited[i]) {
             dfs(adj, V, i, visited);
         }
@@ -19,7 +20,7 @@ void addEdge(int adj[MAX][MAX], int u, int v) {
 }
 
 int main() {
-    int V, E, u, v, start;
+    int V, E, u, v, start,i;
     int adj[MAX][MAX] = {0};
     bool visited[MAX] = {false};
 
@@ -27,7 +28,7 @@ int main() {
     scanf("%d %d", &V, &E);
 
     printf("Enter edges (u v):\n");
-    for (int i = 0; i < E; i++) {
+    for (i = 0; i < E; i++) {
         scanf("%d %d", &u, &v);
         addEdge(adj, u, v);
     }
