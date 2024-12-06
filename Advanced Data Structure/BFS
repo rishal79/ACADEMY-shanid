@@ -5,7 +5,7 @@
 #define MAX 100
 
 void bfs(int adj[MAX][MAX], int V, int s) {
-    int curr,i;
+    int curr, i;
     int q[MAX], front = 0, rear = 0;    
     bool visited[MAX] = { false };
     visited[s] = true;
@@ -17,10 +17,16 @@ void bfs(int adj[MAX][MAX], int V, int s) {
         for (i = 0; i < V; i++) {
             if (adj[curr][i] == 1 && !visited[i]) {
                 visited[i] = true;
-                q[rear++] = i;
+                if (rear < MAX) {
+                    q[rear++] = i; // Ensure rear doesn't exceed MAX
+                } else {
+                    printf("\nError: Queue overflow\n");
+                    return;
+                }
             }
         }
     }
+    printf("\n");
 }
 
 void addEdge(int adj[MAX][MAX], int u, int v) {
@@ -29,25 +35,33 @@ void addEdge(int adj[MAX][MAX], int u, int v) {
 }
 
 int main() {
-    int V, E, u, v, start,i;
+    int V, E, u, v, start, i;
     int adj[MAX][MAX] = {0};
   
     printf("Enter the number of vertices: ");
     scanf("%d", &V);
 
-    
+    if (V > MAX) {
+        printf("Error: Maximum number of vertices exceeded (%d).\n", MAX);
+        return 1;
+    }
 
     printf("Enter the number of edges: ");
     scanf("%d", &E);
 
     printf("Enter the edges (u v) where 0 <= u,v < %d:\n", V);
-    for ( i = 0; i < E; i++) {
+    for (i = 0; i < E; i++) {
         scanf("%d %d", &u, &v);
         addEdge(adj, u, v);
     }
 
     printf("Enter the starting vertex for BFS: ");
     scanf("%d", &start);
+
+    if (start < 0 || start >= V) {
+        printf("Error: Starting vertex out of bounds.\n");
+        return 1;
+    }
 
     printf("BFS starting from vertex %d:\n", start);
     bfs(adj, V, start);
