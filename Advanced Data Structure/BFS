@@ -11,10 +11,10 @@ void bfs(int adj[MAX][MAX], int V, int s) {
     q[rear++] = s;
     
     while (front < rear) {
-        int curr = q[front++];
+        int curr = q[front++],i;
         printf("%d ", curr);
         
-        for (int i = 0; i < V; i++) {
+        for (i = 0; i < V; i++) {
             if (adj[curr][i] == 1 && !visited[i]) {
                 visited[i] = true;
                 q[rear++] = i;
