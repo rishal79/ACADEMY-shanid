@@ -14,7 +14,7 @@ void bfs(int adj[MAX][MAX], int V, int s) {
         int curr = q[front++],i;
         printf("%d ", curr);
         
-        for (i = 0; i < V; i++) {
+        for (i = 0; i <=V; i++) {
             if (adj[curr][i] == 1 && !visited[i]) {
                 visited[i] = true;
                 q[rear++] = i;
