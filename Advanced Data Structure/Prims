@@ -4,8 +4,8 @@
 #define MAX 100
 
 int minKey(int key[], bool mstSet[], int V) {
-    int min = INT_MAX, minIndex;
-    for (int v = 0; v < V; v++) {
+    int min = INT_MAX, minIndex,v;
+    for (v = 0; v < V; v++) {
         if (!mstSet[v] && key[v] < min) {
             min = key[v];
             minIndex = v;
@@ -15,19 +15,19 @@ int minKey(int key[], bool mstSet[], int V) {
 }
 
 void primMST(int adj[MAX][MAX], int V) {
-    int parent[V];
+    int parent[V],i,count,u,v;
     int key[V];
     bool mstSet[V];
-    for (int i = 0; i < V; i++) {
+    for (i = 0; i < V; i++) {
         key[i] = INT_MAX;
         mstSet[i] = false;
         parent[i] = -1;
     }
     key[0] = 0;
-    for (int count = 0; count < V - 1; count++) {
-        int u = minKey(key, mstSet, V);
+    for (count = 0; count < V - 1; count++) {
+        u = minKey(key, mstSet, V);
         mstSet[u] = true;
-        for (int v = 0; v < V; v++) {
+        for (v = 0; v < V; v++) {
             if (adj[u][v] != 0 && !mstSet[v] && adj[u][v] < key[v]) {
                 key[v] = adj[u][v];
                 parent[v] = u;
@@ -35,7 +35,7 @@ void primMST(int adj[MAX][MAX], int V) {
         }
     }
     printf("Edge \tWeight\n");
-    for (int i = 1; i < V; i++) {
+    for (i = 1; i < V; i++) {
         printf("%d - %d \t%d\n", parent[i], i, adj[i][parent[i]]);
     }
 }
