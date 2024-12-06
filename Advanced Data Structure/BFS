@@ -6,7 +6,7 @@
 
 void bfs(int adj[MAX][MAX], int V, int s) {
     int curr, i;
-    int q[MAX], front = 0, rear = 0;    
+    int q[MAX], front = 0, rear = 0;
     bool visited[MAX] = { false };
     visited[s] = true;
     q[rear++] = s;
@@ -17,12 +17,7 @@ void bfs(int adj[MAX][MAX], int V, int s) {
         for (i = 0; i < V; i++) {
             if (adj[curr][i] == 1 && !visited[i]) {
                 visited[i] = true;
-                if (rear < MAX) {
-                    q[rear++] = i; // Ensure rear doesn't exceed MAX
-                } else {
-                    printf("\nError: Queue overflow\n");
-                    return;
-                }
+                q[rear++] = i;
             }
         }
     }
