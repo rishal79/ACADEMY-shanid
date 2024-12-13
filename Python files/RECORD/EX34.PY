@@ -1,68 +1,33 @@
-class bank:
-    __acc_name=""
-    __acc_no = ""
-    __acc_type = ""
-    __acc_balance = 0
-    
-    def __init__(self,a_name,a_no,a_type,a_balance):
-        self.__acc_name = a_name
-        self.__acc_no = a_no
-        self.__acc_type = a_type
-        self.__acc_balance = a_balance
-        
-    def deposite(self,a_deposit):
-        print("Initial balance is  : ",self.__acc_balance)
-        print("Deposite is  : ",a_deposit)
-        self.__acc_balance += a_deposit
-        print("Current balance is  : ",self.__acc_balance)
-        
-    def withdraw(self):
-        print("Current balance is  : ",self.__acc_balance)
-        self.amount = int(input("How much amount need to withdraw : "))
-        if self.amount > self.__acc_balance:
-            print("You don't have enough balance to withdraw !!")
-            print("Current balance is  : ",self.__acc_balance)
-        else:
-            print(self.amount," is withrawed .")
-            self.__acc_balance -= self.amount
-            print("Current balance is  : ",self.__acc_balance)
-            
-    def acc_info(self):
-         print("\n\n|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n\n")
-         print("Account holder name  :  ",self.__acc_name)
-         print("Account number         :  ",self.__acc_no)
-         print("Account type              :  ",self.__acc_type)
-         print("Account Balance is      :  ",self.__acc_balance)
-         print("\n\n|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n\n")
-         
-        
-def main():
-    
-    name  = input("Enter Account holder name : ")
-    no      = input("Enter Account number        : ")
-    atype  = input("Enter Account type             : ")
-    bal      = int(input("Enter Account initial balance : "))
-    holder = bank(name,no,atype,bal)
+class BankAccount:
+    def __init__(self, account_number, name, account_type, balance=0.0):
+        self.account_number = account_number
+        self.name = name
+        self.account_type = account_type
+        self.balance = balance
 
-    while(True):
-        print("\n\n.........................................................\n\n")
-        opt = int(input("1)Deposite \n2)Withdraw \n3)Account info \n0)Exit\nChoose your option :: "))
-        print("\n\n.........................................................\n\n")
-        if opt == 1:
-            amount = int(input("Deposite amount : "))
-            holder.deposite(amount)
-        elif opt == 2:
-            holder.withdraw()
-        elif opt == 3:
-            holder.acc_info()
-        elif opt == 0:
-            break
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            print(f"₹{amount} deposited. New balance: ₹{self.balance}")
         else:
-            print("Invalid Option !")
-            
-if __name__ == "__main__":
-    while(True):
-        main()
-    
+            print("Invalid deposit amount.")
 
-        
+    def withdraw(self, amount):
+        if 0 < amount <= self.balance:
+            self.balance -= amount
+            print(f"₹{amount} withdrawn. Remaining balance: ₹{self.balance}")
+        else:
+            print("Invalid or insufficient funds.")
+
+    def display_account_details(self):
+        print(f"Account Number: {self.account_number}")
+        print(f"Account Holder: {self.name}")
+        print(f"Account Type: {self.account_type}")
+        print(f"Balance: ₹{self.balance}")
+
+
+account = BankAccount("123456789", "John Doe", "Savings", 5000)
+account.display_account_details()
+account.deposit(2000)
+account.withdraw(1500)
+account.withdraw(7000)
