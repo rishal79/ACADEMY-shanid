@@ -16,3 +16,10 @@ else:
 
 l3=[i for i in L1 if i in L2]
 print("common in both",l3)
+
+# Step 1: Start
+# Step 2: Check if the lengths of both lists are equal and print the result
+# Step 3: Check if the sums of both lists are equal and print the result
+# Step 4: Find and print common elements between the two lists
+# Step 5: End
+
