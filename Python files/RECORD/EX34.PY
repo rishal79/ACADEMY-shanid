@@ -31,3 +31,26 @@ account.display_account_details()
 account.deposit(2000)
 account.withdraw(1500)
 account.withdraw(7000)
+
+
+# Step 1: Start
+
+# Define the BankAccount class
+# Step 2: Create the class with attributes for account number, name, account type, and balance
+# Step 3: Define methods to deposit money, withdraw money, and display account details
+
+# Handle deposit
+# Step 4: If a valid deposit amount is given, add it to the balance and print the new balance
+# Step 5: If the deposit amount is invalid, print an error message
+
+# Handle withdrawal
+# Step 6: If the withdrawal amount is valid and less than or equal to the balance, subtract it from the balance and print the new balance
+# Step 7: If the withdrawal is invalid or exceeds the balance, print an error message
+
+# Display account details
+# Step 8: Print the account details including account number, name, account type, and balance
+
+# Create a bank account with some details
+# Step 9: Call the methods to deposit, withdraw, and display details
+
+# Step 10: Stop
