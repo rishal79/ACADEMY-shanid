@@ -1,7 +1,5 @@
-a = int(input("Type the first number : "))
-b = int(input("Type the second number : "))
-while b != 0:
-    r = a % b
-    a = b
-    b = r
-print("The GCD of the numbers is", a)
+import math
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+gcd = math.gcd(num1, num2)
+print("The GCD of", num1, "and", num2, "is:", gcd)
