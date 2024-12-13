@@ -9,3 +9,10 @@ for i in x[:]:
         if 'a' in j:
             c=c+1
 print(c)
+
+# Step 1: Start
+# Step 2: Get the number of names to enter
+# Step 3: Collect names in a list
+# Step 4: Count occurrences of 'a' in all names
+# Step 5: Print the count of 'a'
+# Step 6: End
