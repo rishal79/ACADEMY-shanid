@@ -6,9 +6,9 @@ print("Sorted in Ascending Order:", sorted_asc)
 print("Sorted in Descending Order:", sorted_desc)
 
 
-Step 1: Start
-Step 2: Create a dictionary with key-value pairs
-Step 3: Sort the dictionary in ascending order by values
-Step 4: Sort the dictionary in descending order by values
-Step 5: Print both sorted dictionaries
-Step 6: End
+# Step 1: Start
+# Step 2: Create a dictionary with key-value pairs
+# Step 3: Sort the dictionary in ascending order by values
+# Step 4: Sort the dictionary in descending order by values
+# Step 5: Print both sorted dictionaries
+# Step 6: End
