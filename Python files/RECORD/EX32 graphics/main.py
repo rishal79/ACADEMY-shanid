@@ -8,8 +8,8 @@ print(f"Circle Area: {cir_area(5)}")
 print(f"Circle Perimeter: {cir_perimeter(5)}")
 
 # Rectangle
-print(f"Rectangle Area: {recta_area(4,6)}")
-print(f"Rectangle Perimeter: {recta_perimeter(4,6)}")
+print(f"Rectangle Area: {r_area(4,6)}")
+print(f"Rectangle Perimeter: {r_perimeter(4,6)}")
 
 # Sphere
 print(f"Sphere Area: {sphere_area(3)}")
