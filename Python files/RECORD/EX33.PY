@@ -20,3 +20,10 @@ rect1 = Rectangle(5, 3)
 rect2 = Rectangle(4, 4)
 
 print(rect1.compare_area(rect2))
+
+# Step 1: Start
+# Step 2: Define a 'Rectangle' class with methods area,perimeter and compare_area
+# Step 3: Create two rectangle objects with given dimensions.
+# Step 4: Use the compare_area method to compare the areas of the two rectangles.
+# Step 5: Print the result of the comparison.
+# Step 6: Stop
