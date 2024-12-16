@@ -1,0 +1,57 @@
+---
+
+### **ALGORITHM**
+
+**Step 1**: Start.
+
+**Step 2**: Define the structure `Node` with three fields:  
+   - `data` (integer)  
+   - `left` (pointer to the left child)  
+   - `right` (pointer to the right child).
+
+**Step 3**: Define the function `createNode(int data)` to create a new node with the given data.  
+   - Allocate memory for a new node.  
+   - Set `data` to the given value.  
+   - Set `left` and `right` to `NULL`.  
+   - Return the newly created node.
+
+**Step 4**: Define the function `insert(struct Node* root, int data)` to insert a node in the binary search tree.  
+   - If `root` is `NULL`, return a new node created using `createNode()`.  
+   - If the `data` is less than the `root->data`, insert the data in the left subtree.  
+   - If the `data` is greater than the `root->data`, insert the data in the right subtree.  
+   - Return the root node.
+
+**Step 5**: Define the function `findMin(struct Node* node)` to find the node with the minimum value in the tree.  
+   - Traverse to the leftmost node and return that node.
+
+**Step 6**: Define the function `deleteNode(struct Node* root, int data)` to delete a node with the specified data.  
+   - If `root` is `NULL`, return `root`.  
+   - If `data` is less than `root->data`, recursively call `deleteNode` on the left subtree.  
+   - If `data` is greater than `root->data`, recursively call `deleteNode` on the right subtree.  
+   - If `data` is equal to `root->data` (node to delete is found):  
+     - If the node has no left child, set `root` to its right child and free the node.  
+     - If the node has no right child, set `root` to its left child and free the node.  
+     - If the node has both left and right children, find the minimum node in the right subtree, copy its data to the root, and delete that minimum node.  
+   - Return the root node.
+
+**Step 7**: Define the function `inorder(struct Node* root)` to perform inorder traversal.  
+   - If `root` is not `NULL`, recursively traverse the left subtree, print the `data` of the current node, and then recursively traverse the right subtree.
+
+**Step 8**: In the `main` function, perform the following:  
+   - Initialize `root` to `NULL`.  
+   - Define a loop to repeatedly display the menu and handle user input.  
+   - Print the available operations:  
+     - 1. Insert  
+     - 2. Delete  
+     - 3. Inorder Traversal  
+     - 4. Exit  
+   - Read the user's choice and perform the corresponding operation using a `switch` statement.  
+     - Case 1: Insert a value.  
+     - Case 2: Delete a value.  
+     - Case 3: Perform inorder traversal and display the tree.  
+     - Case 4: Exit the program.  
+   - Print "Invalid choice" if the user inputs an invalid option.
+
+**Step 9**: Stop.
+
+---

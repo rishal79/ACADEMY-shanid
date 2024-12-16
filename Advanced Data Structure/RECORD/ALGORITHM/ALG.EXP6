@@ -1,0 +1,39 @@
+---
+
+### **ALGORITHM**
+
+**Step 1**: Start.
+
+**Step 2**: Define the constant `MAX` as 100 (maximum number of vertices).
+
+**Step 3**: Define the function `bfs(int adj[MAX][MAX], int V, int s)` to perform the Breadth-First Search (BFS) on the graph:  
+   - Initialize a queue `queue[MAX]`, with `front` and `rear` set to 0.  
+   - Initialize a boolean array `visited[MAX]` to keep track of visited vertices.  
+   - Set all elements of `visited` to `false` initially.  
+   - Set `visited[s]` to `true` and enqueue the starting vertex `s`.
+
+**Step 4**: While the queue is not empty (i.e., `front < rear`), repeat Steps 5-8:  
+
+**Step 5**: Dequeue the front element from the queue and set it as the current vertex `curr`.
+
+**Step 6**: Print the current vertex `curr`.
+
+**Step 7**: For each vertex `i` from 0 to `V`:
+   - If there is an edge between `curr` and `i` (i.e., `adj[curr][i] == 1`) and `i` is not visited, mark `i` as visited and enqueue `i` into the queue.
+
+**Step 8**: Continue the process until the queue is empty.
+
+**Step 9**: Print a newline after the BFS traversal is completed.
+
+**Step 10**: In the `main` function, perform the following:  
+   - Read the number of vertices `V` and edges `E`.  
+   - Initialize an adjacency matrix `adj[MAX][MAX]` with all elements set to 0.  
+   - For each edge, read the vertices `u` and `v`, and set `adj[u][v] = adj[v][u] = 1` (for undirected graph).  
+
+**Step 11**: Read the starting vertex `startVertex`.
+
+**Step 12**: Call the `bfs()` function with the adjacency matrix, the number of vertices, and the starting vertex.
+
+**Step 13**: Stop.
+
+---

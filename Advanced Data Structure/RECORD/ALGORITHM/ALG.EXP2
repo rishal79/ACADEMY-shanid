@@ -1,0 +1,61 @@
+---
+
+### **ALGORITHM**
+
+**Step 1**: Start.  
+
+**Step 2**: Declare a structure `stack` with integer data and a pointer to the next stack element.  
+
+**Step 3**: Declare a global pointer `top` initialized to `NULL`.  
+
+**Step 4**: Define the functions:  
+   - `push(struct stack *, int)`: To push a value onto the stack.  
+   - `pop(struct stack *)`: To pop a value from the stack.  
+   - `display(struct stack *)`: To display the stack elements.  
+
+**Step 5**: In the `main` function, declare variables `val` and `option`.  
+
+**Step 6**: Print the menu options:  
+   - 1. PUSH  
+   - 2. POP  
+   - 3. DISPLAY  
+   - 4. EXIT  
+
+**Step 7**: Read the option entered by the user.  
+
+**Step 8**: Repeat steps 9-13 until `option == 4`.  
+
+**Step 9**: If `option == 1` (PUSH), do the following:  
+   - Print "Enter the number to be pushed on stack".  
+   - Read the value `val`.  
+   - Call `push(top, val)` to push the value onto the stack.  
+
+**Step 10**: If `option == 2` (POP), do the following:  
+   - Call `pop(top)` to pop a value from the stack.  
+
+**Step 11**: If `option == 3` (DISPLAY), do the following:  
+   - Call `display(top)` to display the stack elements.  
+
+**Step 12**: If `option == 4` (EXIT), exit the program.  
+
+**Step 13**: If the entered option is invalid, print "Invalid choice".  
+
+**Step 14**: In the `push` function, do the following:  
+   - Allocate memory for a new stack node.  
+   - Assign the data of the new node as `val`.  
+   - If the stack is empty (`top == NULL`), set the new node as the `top`.  
+   - Otherwise, set the new node's `next` pointer to the current `top` and update `top` to the new node.  
+   - Return the updated `top`.  
+
+**Step 15**: In the `pop` function, do the following:  
+   - If the stack is empty (`top == NULL`), print "STACK UNDERFLOW".  
+   - Otherwise, set `top` to the next node, print the popped value, and free the memory of the deleted node.  
+   - Return the updated `top`.  
+
+**Step 16**: In the `display` function, do the following:  
+   - If the stack is empty (`top == NULL`), print "STACK IS EMPTY".  
+   - Otherwise, traverse through the stack and print each node's data.  
+
+**Step 17**: Stop.  
+
+---

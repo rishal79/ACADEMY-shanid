@@ -1,0 +1,29 @@
+---
+
+### **ALGORITHM**
+
+**Step 1**: Start.
+
+**Step 2**: Define the constant `MAX` as 100 (maximum number of vertices).
+
+**Step 3**: Define the function `dfs(int adj[MAX][MAX], int V, int s, bool visited[MAX])` to perform Depth-First Search (DFS) on the graph:  
+   - Mark the current vertex `s` as visited (`visited[s] = true`).  
+   - Print the current vertex `s`.
+
+**Step 4**: For each vertex `i` from 0 to `V`:  
+   - If there is an edge between `s` and `i` (i.e., `adj[s][i] == 1`) and `i` is not visited, call the `dfs()` function recursively on vertex `i`.
+
+**Step 5**: In the `main` function, perform the following:  
+   - Read the number of vertices `V` and edges `E`.  
+   - Initialize an adjacency matrix `adj[MAX][MAX]` with all elements set to 0.  
+   - For each edge, read the vertices `u` and `v`, and set `adj[u][v] = adj[v][u] = 1` (for undirected graph).  
+
+**Step 6**: Initialize a boolean array `visited[MAX]` to track visited vertices. Set all elements to `false`.
+
+**Step 7**: Read the starting vertex `startVertex`.
+
+**Step 8**: Call the `dfs()` function with the adjacency matrix, number of vertices, the starting vertex, and the visited array.
+
+**Step 9**: Stop.
+
+---

@@ -1,0 +1,55 @@
+---
+
+### **ALGORITHM**
+
+**Step 1**: Start.  
+
+**Step 2**: Define constants and variables:  
+   - `MAX = 5` (maximum size of the circular queue).  
+   - `queue[MAX]` (array representing the queue).  
+   - `front = -1`, `rear = -1` (pointers for the front and rear of the queue).  
+
+**Step 3**: Define the function `isFull()` to check if the queue is full.  
+   - If `(rear + 1) % MAX == front`, return `1` (true), else return `0` (false).  
+
+**Step 4**: Define the function `isEmpty()` to check if the queue is empty.  
+   - If `front == -1`, return `1` (true), else return `0` (false).  
+
+**Step 5**: Define the function `enqueue(int value)` to insert a value into the queue.  
+   - If `isFull()` returns `1`, print "Queue is full!" and exit the function.  
+   - If the queue is empty (`front == -1`), set `front = 0`.  
+   - Increment `rear` using `(rear + 1) % MAX`.  
+   - Insert `value` into `queue[rear]`.  
+   - Print the inserted value.  
+
+**Step 6**: Define the function `dequeue()` to remove a value from the queue.  
+   - If `isEmpty()` returns `1`, print "Queue is empty!" and exit the function.  
+   - Remove the value from `queue[front]` and store it in `value`.  
+   - If `front == rear`, set `front = rear = -1` (queue is now empty).  
+   - Otherwise, increment `front` using `(front + 1) % MAX`.  
+   - Print the removed value.  
+
+**Step 7**: Define the function `display()` to print the elements of the queue.  
+   - If `isEmpty()` returns `1`, print "Queue is empty!" and exit the function.  
+   - Initialize `i = front` and loop until `i == rear`.  
+   - Print each element in the queue: `queue[i]`.  
+   - After the loop, print `queue[rear]` (last element).  
+
+**Step 8**: In the `main` function, define a loop to repeatedly display the menu and handle user input.  
+   - Print the options:  
+     - 1. Enqueue  
+     - 2. Dequeue  
+     - 3. Display  
+     - 4. Exit  
+   - Read the user input `choice`.  
+
+**Step 9**: Use a `switch` statement to handle the user's choice:  
+   - Case 1: Read the value `value` to insert and call `enqueue(value)`.  
+   - Case 2: Call `dequeue()` to remove an element from the queue.  
+   - Case 3: Call `display()` to show the current queue elements.  
+   - Case 4: Exit the program.  
+   - Default: Print "Invalid choice!" and prompt the user again.  
+
+**Step 10**: Stop.  
+
+---
