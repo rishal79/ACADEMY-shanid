@@ -1,24 +1,57 @@
 
-### Algorithm for DFS (Depth-First Search):
+---
+### **Algorithm for Merging and Sorting Two Arrays**
+
 **Step 1: Start**
-**Step 2: Read the number of vertices `V`.**
-**Step 3: Read the number of edges `E`.**
-**Step 4: Initialize an adjacency matrix `adj[MAX][MAX]` with all values set to 0.**
-**Step 5: For each edge `i` from 1 to `E`:**
-   - Read the vertices `u` and `v`.
-   - Set `adj[u][v] = adj[v][u] = 1` (undirected graph).
-**Step 6: Initialize a `visited[MAX]` array with all values set to `false`.**
-**Step 7: Read the starting vertex `startVertex`.**
-**Step 8: Call DFS function with parameters: `adj`, `V`, `startVertex`, and `visited`.**
+
+**Step 2: Read the size of the first array `n`:**
+   - Print "Enter the size of the first array".
+   - Input `n` (size of the first array).
+
+**Step 3: Read the elements of the first array `a[n]`:**
+   - Print "Enter the array elements".
+   - For `i = 0` to `n-1`, input `a[i]`.
+
+**Step 4: Read the size of the second array `m`:**
+   - Print "Enter the size of the second array".
+   - Input `m` (size of the second array).
+
+**Step 5: Read the elements of the second array `b[m]`:**
+   - Print "Enter the array elements".
+   - For `i = 0` to `m-1`, input `b[i]`.
+
+**Step 6: Initialize `k = n + m` (size of the merged array).**
+
+**Step 7: Merge and sort the two arrays into the third array `c[k]`:**
+   - Initialize `i = 0`, `j = 0`, `z = 0` for merging the arrays.
+   - For `z = 0` to `k-1`:
+     - **If `i >= n` (i.e., first array `a[]` is exhausted):**
+       - Set `c[z] = b[j]`.
+       - Increment `j` by 1.
+     - **Else if `j >= m` (i.e., second array `b[]` is exhausted):**
+       - Set `c[z] = a[i]`.
+       - Increment `i` by 1.
+     - **Else if `a[i] < b[j]` (i.e., current element of `a[]` is smaller):**
+       - Set `c[z] = a[i]`.
+       - Increment `i` by 1.
+     - **Else (i.e., current element of `b[]` is smaller or equal):**
+       - Set `c[z] = b[j]`.
+       - Increment `j` by 1.
+
+**Step 8: Display the merged and sorted array `c[k]`:**
+   - Print "The sorted array is as given below".
+   - For `i = 0` to `k-1`, print `c[i]`.
+
+**Step 9: End**
 
 ---
 
-### DFS Function (Recursive):
+### **Summary of the Algorithm:**
+1. **Start** the program.
+2. **Input** the size and elements of the first array `a[]`.
+3. **Input** the size and elements of the second array `b[]`.
+4. **Merge** the two arrays `a[]` and `b[]` into the array `c[]` while sorting them.
+5. **Display** the merged and sorted array `c[]`.
+6. **End** the program.
 
-**Step 9: Mark the current vertex `s` as visited: `visited[s] = true`.**
-**Step 10: Print the current vertex `s`.**
-**Step 11: For each vertex `i` from `0` to `V-1`:**
-   - **Condition:** If `adj[s][i] == 1` (there is an edge from `s` to `i`) and `visited[i] == false`:
-     - Call the DFS function recursively with `i` as the new starting vertex
-**Step 12: Repeat Step 9 to Step 11 for all unvisited connected vertices.**
-**Step 13: Stop**
+---

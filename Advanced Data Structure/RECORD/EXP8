@@ -68,3 +68,4 @@ int main() {
     primMST(adj, V);
 
     return 0;
+}
