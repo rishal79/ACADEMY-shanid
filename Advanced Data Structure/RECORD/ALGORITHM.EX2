@@ -1,0 +1,72 @@
+### Algorithm for Stack Operations using Linked List:
+
+**Step 1: Start**
+
+**Step 2: Initialize an empty stack.**
+   - Declare a pointer `top` and initialize it to `NULL` (representing an empty stack).
+
+**Step 3: Display the main menu for user input.**
+   - Show options for Push, Pop, Display, and Exit.
+
+**Step 4: Read the user's choice (option).**
+   - If option is `1`, perform Push operation.
+   - If option is `2`, perform Pop operation.
+   - If option is `3`, perform Display operation.
+   - If option is `4`, exit the program.
+
+---
+
+### Push Operation (Add element to the stack):
+
+**Step 5: Push operation (`push` function):**
+   - **Input**: Read the value to be pushed onto the stack.
+   - **Create a new node**: Allocate memory for a new node using `malloc`.
+   - **Set node data**: Assign the value read from input to the node's `data` field.
+   - **Link the new node**: 
+     - If the stack is empty (`top == NULL`), set the `next` pointer of the new node to `NULL` and make the new node the top.
+     - Otherwise, set the new node's `next` pointer to the current `top`, then make the new node the new `top`.
+   - **Return**: The updated `top` pointer (the top of the stack).
+
+---
+
+### Pop Operation (Remove element from the stack):
+
+**Step 6: Pop operation (`pop` function):**
+   - **Check if the stack is empty**:
+     - If `top == NULL`, print "STACK UNDERFLOW" and return the current `top`.
+   - **Remove the top node**:
+     - Save the `top` node in a pointer `ptr`.
+     - Set `top` to the next node in the stack (`top = top->next`).
+     - Print the value of the node that is being popped (`ptr->data`).
+     - Free the memory allocated for the node (`free(ptr)`).
+   - **Return**: The updated `top` pointer.
+
+---
+
+### Display Operation (Show all elements in the stack):
+
+**Step 7: Display operation (`display` function):**
+   - **Check if the stack is empty**:
+     - If `top == NULL`, print "STACK IS EMPTY".
+   - **Traverse the stack**:
+     - Initialize a pointer `ptr` to `top`.
+     - Traverse the stack from top to bottom, printing the value of each node (`ptr->data`).
+     - Move to the next node (`ptr = ptr->next`).
+   - **Return**: The current `top` pointer (no change).
+
+---
+**Step 8: Exit the program if option `4` is selected.**
+---
+
+### Main Menu Flow:
+- **Step 9**: If option `1` is selected:
+   - Call the `push()` function to add a value to the stack.
+- **Step 10**: If option `2` is selected:
+   - Call the `pop()` function to remove the top value from the stack.
+- **Step 11**: If option `3` is selected:
+   - Call the `display()` function to print all the values currently in the stack.
+- **Step 12**: If option `4` is selected:
+   - Exit the program.
+**Step 13: Stop** when the program exits.
+
+---
