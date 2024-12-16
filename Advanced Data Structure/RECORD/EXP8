@@ -67,5 +67,4 @@ int main() {
     printf("Minimum Spanning Tree (MST) using Prim's Algorithm:\n");
     primMST(adj, V);
 
-    return 0;
-}
+    return 0;}
