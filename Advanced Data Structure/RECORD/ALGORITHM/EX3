@@ -1,0 +1,59 @@
+### **Algorithm for Circular Queue Operations**
+
+**Step 1: Start**
+
+**Step 2: Initialize the queue:**
+   - Create an array `queue[MAX]` where `MAX = 5`.
+   - Set `front = -1` and `rear = -1` to indicate the queue is empty.
+
+**Step 3: Main Menu Loop:**
+   - Display the menu with the following options:
+     - 1. Enqueue
+     - 2. Dequeue
+     - 3. Display
+     - 4. Exit
+   - Read the user's choice into `choice`.
+
+**Step 4: Process User Choice (Repeat until option 4 is selected):**
+   - **If choice is 1 (Enqueue):**
+     - Step 5: Read the value to be inserted into the queue.
+     - Step 6: Call `enqueue()` function.
+   - **If choice is 2 (Dequeue):**
+     - Step 7: Call `dequeue()` function.
+   - **If choice is 3 (Display):**
+     - Step 8: Call `display()` function.
+   - **If choice is 4 (Exit):**
+     - Step 9: Exit the program.
+   - **Else (Invalid choice):**
+     - Step 10: Print "Invalid choice. Please try again."
+
+**Step 5: Enqueue Operation (Insert element into the queue):**
+   - **Check if queue is full (isFull):**
+     - If `isFull()` returns 1, print "Queue is full!" and return to the menu.
+   - **Else (Queue is not full):**
+     - If `front == -1`, set `front = 0`.
+     - Set `rear = (rear + 1) % MAX`.
+     - Insert the value into `queue[rear]`.
+     - Print the inserted value.
+
+**Step 6: Dequeue Operation (Remove element from the queue):**
+   - **Check if queue is empty (isEmpty):**
+     - If `isEmpty()` returns 1, print "Queue is empty!" and return to the menu.
+   - **Else (Queue is not empty):**
+     - Save the value at `queue[front]` to a temporary variable.
+     - If `front == rear`, set `front = rear = -1` (queue becomes empty).
+     - Else, set `front = (front + 1) % MAX` to update the front.
+     - Print the removed value.
+
+**Step 7: Display Operation (Show all elements in the queue):**
+   - **Check if queue is empty (isEmpty):**
+     - If `isEmpty()` returns 1, print "Queue is empty!" and return to the menu.
+   - **Else (Queue is not empty):**
+     - Print all elements from `front` to `rear`, circularly using `(i + 1) % MAX`.
+     - If `front` and `rear` are the same, print the single element.
+
+**Step 8: Repeat the main menu loop until option 4 (Exit) is selected.**
+
+**Step 9: Stop** the program.
+
+---
