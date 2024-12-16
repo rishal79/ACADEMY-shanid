@@ -1,0 +1,24 @@
+
+### Algorithm for DFS (Depth-First Search):
+**Step 1: Start**
+**Step 2: Read the number of vertices `V`.**
+**Step 3: Read the number of edges `E`.**
+**Step 4: Initialize an adjacency matrix `adj[MAX][MAX]` with all values set to 0.**
+**Step 5: For each edge `i` from 1 to `E`:**
+   - Read the vertices `u` and `v`.
+   - Set `adj[u][v] = adj[v][u] = 1` (undirected graph).
+**Step 6: Initialize a `visited[MAX]` array with all values set to `false`.**
+**Step 7: Read the starting vertex `startVertex`.**
+**Step 8: Call DFS function with parameters: `adj`, `V`, `startVertex`, and `visited`.**
+
+---
+
+### DFS Function (Recursive):
+
+**Step 9: Mark the current vertex `s` as visited: `visited[s] = true`.**
+**Step 10: Print the current vertex `s`.**
+**Step 11: For each vertex `i` from `0` to `V-1`:**
+   - **Condition:** If `adj[s][i] == 1` (there is an edge from `s` to `i`) and `visited[i] == false`:
+     - Call the DFS function recursively with `i` as the new starting vertex
+**Step 12: Repeat Step 9 to Step 11 for all unvisited connected vertices.**
+**Step 13: Stop**
