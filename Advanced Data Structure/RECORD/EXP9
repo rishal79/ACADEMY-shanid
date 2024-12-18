@@ -83,3 +83,4 @@ int main() {
     kruskalAlgo(vertices, edges, num_edges);
 
     return 0;
+}
