@@ -19,12 +19,12 @@ for(i=0;i<m;i++)
 k=n+m;
 for(z=0,i=0,j=0;z<k;z++)
 {
-        if(i>n)
+        if(i>=n)
         {
                 c[z]=b[j];
                 j++;
         }
-        else if(j>m)
+        else if(j>=m)
         {
                 c[z]=a[i];
                 i++;
