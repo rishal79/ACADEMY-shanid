@@ -17,12 +17,41 @@
     if ($_POST) {
       $errors = [];
 
-      if (empty($_POST["name"])) $errors[] = "Name is required.";
-      if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) $errors[] = "Invalid email.";
-      if (empty($_POST["password"])) $errors[] = "Password is required.";
-      if ($_POST["password"] !== $_POST["confirm_password"]) $errors[] = "Passwords do not match.";
-      if (!preg_match("/^[0-9]{10}$/", $_POST["phone"])) $errors[] = "Invalid phone number.";
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $password = $_POST['password'];
+      $confirm_password = $_POST['confirm_password'];
+      $phone = $_POST['phone'];
 
+      // Validate Name
+      if (empty($name)) {
+        $errors[] = "Name is required.";
+      }
+      if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
+        $errors[] = "Name should only have alphabets and spaces.";
+      }
+
+      // Validate Email
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Invalid email.";
+      }
+
+      // Validate Password
+      if (empty($password)) {
+        $errors[] = "Password is required.";
+      }
+
+      // Check if Passwords match
+      if ($password !== $confirm_password) {
+        $errors[] = "Passwords do not match.";
+      }
+
+      // Validate Phone
+      if (!preg_match("/^[0-9]{10}$/", $phone)) {
+        $errors[] = "Invalid phone number.";
+      }
+
+      // Output Errors or Success
       if (empty($errors)) {
         echo "Registration successful!";
       } else {
