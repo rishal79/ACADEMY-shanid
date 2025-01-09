@@ -13,7 +13,7 @@ class Time:
             self.__minute+=extra_minute
         if (self.__minute>=60):
             extra_hour=int(self.__minute/60)
-            self.__minute=self.__minute%6
+            self.__minute=self.__minute%60
             self.__hour+=extra_hour
         return "Hour(s):"+str(self.__hour)+": Minute(s): "+str(self.__minute)+": second(s): "+str(self.__second)
 
