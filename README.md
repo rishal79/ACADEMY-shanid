@@ -6,12 +6,12 @@ Welcome to the **S1 Lab Programs Repository**! This repository contains lab prog
 
 ## 🚀 Programming Languages
 <p align="left">
-  <img src="readme/html.png" width="70" height="70" alt="HTML">
-  <img src="readme/css.png" width="70" height="70" alt="CSS">
-  <img src="readme/javascript.png" width="70" height="70" alt="JavaScript">
+  <img src="html.png" width="70" height="70" alt="HTML">
+  <img src="css.png" width="70" height="70" alt="CSS">
+  <img src="javascript.png" width="70" height="70" alt="JavaScript">
 </p>
 <p align="left">
-  <img src="readme/python.png" width="70" height="70" alt="Python">
+  <img src="python.png" width="70" height="70" alt="Python">
   <img src="readme/c.png" width="70" height="70" alt="C">
   <img src="readme/php.png" width="60" height="60" alt="PHP">
   <img src="readme/mysql.png" width="70" height="70" alt="MySQL">
