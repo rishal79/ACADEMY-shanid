@@ -21,7 +21,7 @@ Welcome to the **Academy Repository**! This repository contains lab programs and
 This repository contains lab materials organized by semester. Click on the respective links to access them:
 
 📌 [S1 Lab Programs](./S1_LABS/)  
-📌 [S2 Lab Programs](./S2/)  
+📌 [S2 Lab Programs](./S2_LABS/)  
 📌 [S3 Lab Programs](./S3/)  
 
 Each folder contains programs, documentation, and reference materials specific to that semester's curriculum.
