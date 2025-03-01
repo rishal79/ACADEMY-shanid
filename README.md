@@ -29,12 +29,12 @@ Welcome to the **MCA Practical Repository**! This repository contains practical 
 - Web Programming Lab  
 - Python Programming Lab  
 
-### 📌 [S3 Lab Programs](./S3/)    
+### 📌 [S2 Lab Programs](./S2/)    
 - Database Management Systems (DBMS) Lab  
 - Networking (Linux Lab)  
 - Java Lab  
 
-### 📌 **Semester 3**  
+### 📌 **S3 Lab Programs**  
 - Android App Development (Java Lab)  
 - Data Science (Python Lab)  
 
