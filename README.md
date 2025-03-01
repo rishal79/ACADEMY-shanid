@@ -3,7 +3,7 @@
 Welcome to the **Academy Repository**! This repository contains lab programs and resources for different semesters of the **MCA Department** 
 
 <p align="center">
-  <img src="S1_LABS/readme/college.jpg" width="90%" alt="AWH Engineering College">
+  <img src="S1_LABS/readme/college.jpg" width="95%" HEIGHT="50%" alt="AWH Engineering College">
 </p>
 
 ---
