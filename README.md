@@ -24,12 +24,12 @@ Welcome to the **MCA Practical Repository**! This repository contains practical 
 
 ## 📚 Semesters & Lab Subjects  
 
-### 📌 [S1 Lab Programs](./S1_LABS/) **  
+### 📌 [S1 Lab Programs](./S1_LABS/)   
 - Data Structures (C Lab)  
 - Web Programming Lab  
 - Python Programming Lab  
 
-### 📌 [S3 Lab Programs](./S3/)   **  
+### 📌 [S3 Lab Programs](./S3/)    
 - Database Management Systems (DBMS) Lab  
 - Networking (Linux Lab)  
 - Java Lab  
