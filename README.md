@@ -1,4 +1,4 @@
-# 🎓 ACADEMY
+<CENTER># 🎓 ACADEMY</CENTER>
 
 Welcome to the **Academy Repository**! This repository contains lab programs and resources for different semesters of the **MCA Department** 
 
