@@ -32,9 +32,9 @@ Welcome to the **S1 Lab Programs Repository**! This repository contains various 
 
 ## 📂 Repository Contents
 
-🔹 Hands-on lab programs for different programming languages.
-🔹 Step-by-step guides and project documentation.
-🔹 Reference materials for better understanding of concepts.
+🔹 Hands-on lab programs for different programming languages.<br>
+🔹 Step-by-step guides and project documentation.<br>
+🔹 Reference materials for better understanding of concepts.<br>
 
 ---
 
