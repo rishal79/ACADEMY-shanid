@@ -1,7 +1,10 @@
 # 🎯 S1 LAB PROGRAMS
 
-## 🚀 PROGRAMMING LANGUAGES
+Welcome to the **S1 Lab Programs Repository**! This repository contains lab programs written in various programming languages using different development environments.
 
+---
+
+## 🚀 Programming Languages
 <p align="left">
   <img src="readme/html.png" width="70" height="70" alt="HTML">
   <img src="readme/css.png" width="70" height="70" alt="CSS">
@@ -16,8 +19,7 @@
 
 ---
 
-## 🖥️ IDLE
-
+## 🖥️ Development Environments (IDLEs)
 <p align="left">
   <img src="readme/python_idle.png" width="70" height="70" alt="Python IDLE">
   <img src="readme/putty.png" width="70" height="70" alt="PuTTY">
@@ -26,4 +28,11 @@
 
 ---
 
-📌 *This repository contains lab programs written in multiple programming languages using different IDEs. Stay tuned for updates!* 🚀
+## 📌 About
+🔹 This repository showcases various **S1 Lab Programs** using multiple languages and development environments.  
+🔹 Programs are structured for easy navigation and understanding.  
+🔹 Stay tuned for updates and improvements!
+
+---
+
+📢 *Happy Coding! 🚀*
