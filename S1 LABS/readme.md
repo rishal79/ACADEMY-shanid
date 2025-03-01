@@ -20,4 +20,3 @@
 <img src="readme/putty.png" width="70" height="70">
 <img src="readme/notepad.png" width="55" height="70">
 </p>
-![Image](https://github.com/user-attachments/assets/263e7848-9b00-4ed9-8737-579cf9e804f8)
