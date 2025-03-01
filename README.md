@@ -1,9 +1,9 @@
 # 🎓 ACADEMY
 
-Welcome to the **Academy Repository**! This repository contains lab programs and resources for different semesters of the **MCA Department** at **AWH Engineering College, Kuttikattoor**.
+Welcome to the **Academy Repository**! This repository contains lab programs and resources for different semesters of the **MCA Department** 
 
 <p align="center">
-  <img src="S1_LABS/readme/college.jpg" width="80%" alt="AWH Engineering College">
+  <img src="S1_LABS/readme/college.jpg" width="85%" alt="AWH Engineering College">
 </p>
 
 ---
@@ -12,7 +12,7 @@ Welcome to the **Academy Repository**! This repository contains lab programs and
 
 🔹 **Institution**: AWH Engineering College  
 🔹 **Department**: MCA (Master of Computer Applications)  
-🔹 **Location**: Kuttikattoor  
+ 
 
 ---
 
