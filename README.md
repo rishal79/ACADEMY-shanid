@@ -3,7 +3,7 @@
 Welcome to the **Academy Repository**! This repository contains lab programs and resources for different semesters of the **MCA Department** at **AWH Engineering College, Kuttikattoor**.
 
 <p align="center">
-  <img src="S1_LABS/readme/college.jpg" width="300" alt="AWH Engineering College">
+  <img src="/readme/college.jpg" width="300" alt="AWH Engineering College">
 </p>
 
 ---
@@ -20,7 +20,7 @@ Welcome to the **Academy Repository**! This repository contains lab programs and
 
 This repository contains lab materials organized by semester. Click on the respective links to access them:
 
-📌 [S1 Lab Programs](./S1_LABS/)  
+📌 [S1 Lab Programs](./S1/)  
 📌 [S2 Lab Programs](./S2/)  
 📌 [S3 Lab Programs](./S3/)  
 
