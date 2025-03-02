@@ -29,7 +29,7 @@ Welcome to the **MCA Practical Repository**! This repository contains practical 
 - Web Programming Lab  
 - Python Programming Lab  
 
-### 📌 [S2 Lab Programs](./S2/)    
+### 📌 [S2 Lab Programs](./S2_LABS/)    
 - Database Management Systems (DBMS) Lab  
 - Networking (Linux Lab)  
 - Java Lab  
