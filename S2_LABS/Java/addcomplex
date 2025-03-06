@@ -1,42 +1,32 @@
 import java.util.Scanner;
-
-class Complex {
-    double real;
-    double imag;
-
-    Complex(double r, double i) {
-        real = r;
-        imag = i;
-    }
-
-    Complex add(Complex c) {
-        return new Complex(this.real + c.real, this.imag + c.imag);
-    }
-
-    void display() {
-        System.out.println(real + " + " + imag + "i");
-    }
+class Complexadd{
+        int r,i;
+        Complexadd(int real,int image){
+        this.r=real;
+        this.i=image;
 }
 
-public class addcomplex {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+void add(Complexadd others){
+        int real=this.r+others.r;
+        int image=this.i+others.i;
+        System.out.println(real+"+i"+image);
+}
+public static void main(String[] args){
+Scanner s=new Scanner(System.in);
+System.out.println("enter first complex number");
+System.out.println("enter real part:");
+int real=s.nextInt();
+System.out.println("enter the imaginary part:");
+int image=s.nextInt();
+System.out.println("enter second complex number");
+System.out.println("enter real part:");
+int real1=s.nextInt();
+System.out.println("enter the imaginary part:");
+int image1=s.nextInt();
 
-        System.out.print("Enter real part of first complex number: ");
-        double real1 = scanner.nextDouble();
-        System.out.print("Enter imaginary part of first complex number: ");
-        double imag1 = scanner.nextDouble();
+Complexadd c1=new Complexadd(real,image);
+Complexadd c2=new Complexadd(real1,image1);
+c1.add(c2);
 
-        System.out.print("Enter real part of second complex number: ");
-        double real2 = scanner.nextDouble();
-        System.out.print("Enter imaginary part of second complex number: ");
-        double imag2 = scanner.nextDouble();
-
-        Complex c1 = new Complex(real1, imag1);
-        Complex c2 = new Complex(real2, imag2);
-        Complex result = c1.add(c2);
-
-        System.out.print("Sum of complex numbers: ");
-        result.display();
-    }
+}
 }
