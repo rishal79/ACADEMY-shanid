@@ -1,5 +1,4 @@
 import java.util.Scanner;
-mport java.util.Scanner;
 class Matrixadd{
 public static void main(String[] args){
 Scanner sc=new Scanner(System.in);
