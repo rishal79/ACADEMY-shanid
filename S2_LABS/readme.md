@@ -8,7 +8,7 @@ Welcome to the **S2 Lab Programs Repository**! This repository contains programm
 
 <p align="left">
   <img src="https://static-00.iconduck.com/assets.00/applications-java-icon-1024x1014-rsql1w5w.png" width="70" height="70" alt="Java">
-  <img src="https://th.bing.com/th/id/OIP.pgTshg7D2Ji_cwjGrHD3ogHaHk?w=840&h=859&rs=1&pid=ImgDetMain" width="70" height="70" alt="MySQL">
+  <img src="readme/mysql-original-wordmark.svg" width="70" height="70" alt="MySQL">
   <img src="https://arkit.co.in/wp-content/uploads/2015/09/Shell-Scripting-Tech-Tutorials.png" width="70" height="70" alt="Shell Scripting">
 </p>
 
@@ -19,7 +19,7 @@ Welcome to the **S2 Lab Programs Repository**! This repository contains programm
 <p align="left">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/PuTTY_Icon_upstream.svg/640px-PuTTY_Icon_upstream.svg.png" width="70" height="70" alt="PuTTY" title="Java Programs">
   <img src="https://icon-library.com/images/git-icon/git-icon-28.jpg" width="70" height="70" alt="Git Bash" title="System Administration">
-  <img src="https://pngimg.com/d/mysql_PNG16.png" width="70" height="70" alt="MySQL CLI" title="ADBMS">
+  <img src="readme/mysqlworkbench.svg" width="70" height="70" alt="MySQL CLI" title="ADBMS">
 </p>
 
 **Execution Context:**
