@@ -7,11 +7,11 @@ Welcome to the **S2 Lab Programs Repository**! This repository contains programm
 ## 🚀 Technologies & Tools  
 
 ### 📜 Core Subjects  
-<p align="left">  
-  <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" width="70" height="70" alt="Java">  
-  <img src="https://cdn-icons-png.flaticon.com/512/1199/1199128.png" width="70" height="70" alt="MySQL">  
-  <img src="https://cdn-icons-png.flaticon.com/512/612/612499.png" width="70" height="70" alt="Shell Scripting">  
-</p>  
+<p align="left">
+  <img src="readme/java.png" width="70" height="70" alt="Java">
+  <img src="readme/mysql.png" width="70" height="70" alt="MySQL">
+  <img src="readme/shell.png" width="70" height="70" alt="Shell Scripting">
+</p>
 
 ### 🖥️ Execution Environments  
 <p align="left">  
