@@ -6,25 +6,25 @@ This directory contains Java programs focused on string handling, array operatio
 
 ### Q1  
 Program to sort strings.  
-[View program](./CO2/Q1.java)
+[View program](./Q1.java)
 
 ---
 
 ### Q2  
 Search an element in an array.  
-[View program](./CO2/Q2.java)
+[View program](./Q2.java)
 
 ---
 
 ### Q3  
 Perform string manipulations.  
-[View program](./CO2/Q3.java)
+[View program](./Q3.java)
 
 ---
 
 ### Q4  
 Program to create a class for Employee having attributes `eNo`, `eName`, and `eSalary`. Read *n* employee information and search for an employee given `eNo`, using the concept of Array of Objects.  
-[View program](./CO2/Q4.java)
+[View program](./Q4.java)
 
 ---
 
