@@ -1,4 +1,4 @@
-Q)
+Q)Program to sort strings
 
 
 code:
