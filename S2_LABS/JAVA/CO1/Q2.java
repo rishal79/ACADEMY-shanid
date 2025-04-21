@@ -43,6 +43,21 @@ System.out.println();
 }
 
 
+output:
+
+Enter number of  row ,col : 2 2
+Enter the elements first matrix : 
+2 0
+0 1
+Enter the elements second matrix : 
+1 0
+3 2
+Sum of matrix : 
+3 0 
+3 3 
+
+=== Code Execution Successful ===
+
 Algorithm: Matrix Addition
 Step 1: Declare int row, col, i, j.
 Step 2: Read number of rows and columns (row, col).
