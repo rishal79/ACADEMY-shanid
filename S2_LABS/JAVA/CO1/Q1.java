@@ -36,6 +36,16 @@ class Product{
      }
 }
 
+output:
+
+Enter product code, name and price : 1024 item_A 2000
+Enter product code, name and price : 1025 item_B 2200
+Enter product code, name and price : 1026 item_C 3000
+item_A has the lowest price : 2000
+
+=== Code Execution Successful ===
+
+
 
 Algorithm: Lowest Price Product
 Step 1: Define class Product with variables: int p_code, String p_name, int price.
