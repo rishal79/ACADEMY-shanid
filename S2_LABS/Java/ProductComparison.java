@@ -5,7 +5,8 @@ class Product{
         int price;
 
         Product(){
-        Scanner sc=new Scanner(System.in);
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter product code, name and price : ");
                 this.p_code=sc.nextInt();
                 this.p_name=sc.next();
                 this.price=sc.nextInt();
