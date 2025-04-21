@@ -7,9 +7,9 @@ Welcome to the **S2 Lab Programs Repository**! This repository contains programm
 ## 🚀 Programming Languages & Databases
 
 <p align="left">
-  <img src="https://static-00.iconduck.com/assets.00/applications-java-icon-1024x1014-rsql1w5w.png" width="50" height="50" alt="Java">
-  <img src="readme/mysql-original-wordmark.svg" width="50" height="50" alt="MySQL">
-  <img src="https://arkit.co.in/wp-content/uploads/2015/09/Shell-Scripting-Tech-Tutorials.png" width="50" height="50" alt="Shell Scripting">
+  <img src="https://static-00.iconduck.com/assets.00/applications-java-icon-1024x1014-rsql1w5w.png" width="60" height="60" alt="Java">
+  <img src="readme/mysql-original-wordmark.svg" width="60" height="60" alt="MySQL">
+  <img src="https://arkit.co.in/wp-content/uploads/2015/09/Shell-Scripting-Tech-Tutorials.png" width="60" height="60" alt="Shell Scripting">
 </p>
 
 ---
@@ -17,24 +17,24 @@ Welcome to the **S2 Lab Programs Repository**! This repository contains programm
 ## 🖥️ Development Environments
 
 <p align="left">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/PuTTY_Icon_upstream.svg/640px-PuTTY_Icon_upstream.svg.png" width="50" height="50" alt="PuTTY" title="Java Programs">
-  <img src="https://icon-library.com/images/git-icon/git-icon-28.jpg" width="50" height="50" alt="Git Bash" title="System Administration">
-  <img src="readme/mysqlworkbench.svg" width="50" height="50" alt="MySQL CLI" title="ADBMS">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/PuTTY_Icon_upstream.svg/640px-PuTTY_Icon_upstream.svg.png" width="60" height="60" alt="PuTTY" title="Java Programs">
+  <img src="https://icon-library.com/images/git-icon/git-icon-28.jpg" width="60" height="60" alt="Git Bash" title="System Administration">
+  <img src="readme/mysqlworkbench.svg" width="60" height="60" alt="MySQL CLI" title="ADBMS">
 </p>
 
 **Execution Context:**
-- **JAVA** → PuTTY (Linux environment)
-- **Networking & System Admin** → Git Bash (Shell scripting)
+- **JAVA** → PuTTY (Linux environment)  
+- **Networking & System Admin** → Git Bash (Shell scripting)  
 - **ADBMS** → MySQL Command Line Client
 
 ---
 
 ## 📂 Repository Contents
 
-🔹 **JAVA/** - Core Java programs & JDBC implementations (via PuTTY)  
-🔹 **ADBMS/** - Database schemas, queries, and transactions (MySQL CLI)  
-🔹 **Networking/** - Network configuration and system administration scripts  
-🔹 **Docs/** - Lab records and reference materials  
+🔹 **JAVA/** – Core Java programs & JDBC implementations (via PuTTY)  
+🔹 **ADBMS/** – Database schemas, queries, and transactions (MySQL CLI)  
+🔹 **Networking/** – Network configuration and system administration scripts  
+🔹 **Docs/** – Lab records and reference materials  
 
 ---
 
@@ -44,7 +44,7 @@ Welcome to the **S2 Lab Programs Repository**! This repository contains programm
 ```bash
 javac Program.java
 java Program
-```
+
 
 ### Networking & System Admin on Git Bash
 ```bash
