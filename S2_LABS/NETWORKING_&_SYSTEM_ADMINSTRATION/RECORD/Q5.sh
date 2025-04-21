@@ -1,4 +1,4 @@
-   Write a shell script to classify a triangle as isosceles, equilateral, or scalene based on its side lengths.  
+Q)Write a shell script program to classify a triangle as isosceles, equilateral, or scalene based on its side lengths.  
 
 #!/bin/bash
 clear
@@ -15,15 +15,9 @@ fi
 
 Algorithm:
 Step 1: Ask the user to enter the sides of the triangle.
-
 Step 2: Store the inputs in variables a, b, and c.
-
 Step 3: Check if all three sides are equal (equilateral).
-
 Step 4: If true, print that the triangle is equilateral.
-
 Step 5: If false, check if any two sides are equal (isosceles).
-
 Step 6: If true, print that the triangle is isosceles.
-
 Step 7: If none of the above conditions are true, print that the triangle is scalene.

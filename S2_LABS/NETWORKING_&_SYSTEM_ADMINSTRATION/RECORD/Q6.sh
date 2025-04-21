@@ -1,4 +1,4 @@
-   Write a shell script to test if three given numbers can form the sides of a valid triangle.  
+Q)Write a shell script program to test if three given numbers can form the sides of a valid triangle.  
 
 
 #!/bin/bash
@@ -13,11 +13,7 @@ fi
 
 Algorithm:
 Step 1: Ask the user to enter the three sides of the triangle.
-
 Step 2: Store the inputs in variables a, b, and c.
-
 Step 3: Check if the sum of any two sides is less than or equal to the third side.
-
 Step 4: If true, print that the triangle cannot be formed.
-
 Step 5: If false, print that the triangle can be formed.

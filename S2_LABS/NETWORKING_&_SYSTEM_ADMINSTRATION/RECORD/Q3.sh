@@ -1,4 +1,4 @@
-Write a shell script to identify the largest number among three given numbers.
+Q)Write a shell script program to check the largest among three numbers.
 
 #!/bin/bash
 clear
@@ -16,13 +16,8 @@ fi
 
 Algorithm:
 Step 1: Ask the user to enter three numbers.
-
 Step 2: Store the inputs in variables a, b, and c.
-
 Step 3: Compare a with b and c to check if a is the largest.
-
 Step 4: If a is the largest, print that a is the largest.
-
-Step 5: If b is larger than c, print that b is the largest.
-
+Step 5: If b is larger than c, print that b is the largest.\
 Step 6: If neither of the above conditions is true, print that c is the largest.

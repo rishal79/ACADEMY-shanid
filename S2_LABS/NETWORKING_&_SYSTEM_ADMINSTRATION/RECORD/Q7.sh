@@ -1,4 +1,4 @@
-   Write a shell script to print all even numbers within a specified range.  
+Q)Write a shell script program to print all even numbers within a specified range.  
 
 
 #!/bin/bash
@@ -15,13 +15,8 @@ done
 
 Algorithm:
 Step 1: Ask the user to enter a range, with i as the starting value and n as the ending value.
-
 Step 2: Store the inputs in variables i and n.
-
 Step 3: Print the label "Even numbers".
-
 Step 4: Use a loop to iterate from i to n.
-
 Step 5: Inside the loop, check if the current number is even.
-
 Step 6: If true, print the number.

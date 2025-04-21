@@ -1,4 +1,4 @@
- Write a shell script to determine if a given number is odd or even.
+ Q)Write a shell script program to determine if a given number is odd or even.
 
 #!/bin/bash
 clear
@@ -13,11 +13,7 @@ fi
 
 Algorithm:
 Step 1: Ask the user to enter a value.
-
 Step 2: Store the input in a variable a.
-
 Step 3: Check if a is divisible by 2 (even).
-
 Step 4: If true, print that the number is even.
-
 Step 5: If false, print that the number is odd.
