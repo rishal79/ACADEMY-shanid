@@ -1,3 +1,0 @@
-This is a text file 
-saved as sample.txt
-in desktop
