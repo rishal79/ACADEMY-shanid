@@ -30,9 +30,9 @@ Welcome to the **MCA Practical Repository**! This repository contains practical 
 - Python Programming Lab  
 
 ### 📌 [S2 Lab Programs](./S2_LABS/)    
-- Database Management Systems (DBMS) Lab  
-- Networking (Linux Lab)  
-- Java Lab  
+- Advanced Database Management Systems Lab (SQL)  
+- Networking and System Adminstration Lab (SHELL)  
+- Object Oriented Programming Lab (JAVA)  
 
 ### 📌 **S3 Lab Programs**  
 - Android App Development (Java Lab)  
