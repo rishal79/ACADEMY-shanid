@@ -8,8 +8,8 @@ Welcome to the **S2 Lab Programs Repository**! This repository contains programm
 
 <p align="left">
   <img src="https://static-00.iconduck.com/assets.00/applications-java-icon-1024x1014-rsql1w5w.png" width="60" height="60" alt="Java">
-  <img src="readme/mysql-original-wordmark.svg" width="60" height="60" alt="MySQL">
-  <img src="https://arkit.co.in/wp-content/uploads/2015/09/Shell-Scripting-Tech-Tutorials.png" width="60" height="60" alt="Shell Scripting">
+  <img src="readme/mysql-original-wordmark.svg" width="70" height="70" alt="MySQL">
+  <img src="https://arkit.co.in/wp-content/uploads/2015/09/Shell-Scripting-Tech-Tutorials.png" width="70" height="70" alt="Shell Scripting">
 </p>
 
 ---
