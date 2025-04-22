@@ -7,7 +7,7 @@ Welcome to the **S2 Lab Programs Repository**! This repository contains programm
 ## 🚀 Programming Languages & Databases
 
 <p align="left">
-  <img src="https://static-00.iconduck.com/assets.00/applications-java-icon-1024x1014-rsql1w5w.png" width="55" height="55" alt="Java">
+  <img src="https://static-00.iconduck.com/assets.00/applications-java-icon-1024x1014-rsql1w5w.png" width="60" height="60" alt="Java">
   <img src="readme/mysql-original-wordmark.svg" width="80" height="80" alt="MySQL">
   <img src="https://arkit.co.in/wp-content/uploads/2015/09/Shell-Scripting-Tech-Tutorials.png" width="80" height="80" alt="Shell Scripting">
 </p>
