@@ -49,9 +49,3 @@ Welcome to the **MCA Practical Repository**! This repository contains practical 
 
 ---
 
-## 📢 Stay Connected  
-
-🚀 Keep checking for updates and improvements!  
-
-📌 *Happy Learning & Coding!* 🎯  
-
