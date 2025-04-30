@@ -39,15 +39,8 @@ class Teacher extends Employee {
 }
 
 Output:
-
-
-
-
-
-
-
-
-
+ID: 1, Name: Alice, Salary: 40000.0, Address: Kochi, Department: CS, Subject: Java
+ID: 2, Name: Bob, Salary: 45000.0, Address: TVM, Department: IT, Subject: Python
 
 Algorithm:
 Step 1: Create a class Employee with variables: empId, name, salary, and address.
