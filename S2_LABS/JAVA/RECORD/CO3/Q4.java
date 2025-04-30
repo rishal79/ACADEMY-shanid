@@ -50,11 +50,8 @@ class Fiction extends Book {
 
 Output:
 
-
-
-
-
-
+Literature - Title: Hamlet, Publisher: Penguin
+Fiction - Title: Harry Potter, Publisher: HarperCollins
 
 
 Algorithm:

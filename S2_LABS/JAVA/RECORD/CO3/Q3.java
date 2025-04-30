@@ -65,11 +65,9 @@ class Teacher extends Employee {
 Output:
 
 
-
-
-
-
-
+Name: Alice, Gender: Female, Age: 30, Address: Kochi, EmpId: 1001, Company: ABC School, Qualification: MSc, Salary: 45000.0, Subject: Java, Department: CS, TeacherId: 2001
+Name: Bob, Gender: Male, Age: 35, Address: TVM, EmpId: 1002, Company: XYZ School, Qualification: MCA, Salary: 47000.0, Subject: Python, Department: IT, TeacherId: 2002
+done
 
 Algorithm:
 Step 1: Create a Person class with name, gender, address, and age.
