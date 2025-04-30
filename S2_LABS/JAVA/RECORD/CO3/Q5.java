@@ -47,10 +47,7 @@ class Result extends Student {
 
 Output:
 
-
-
-
-
+Name: Alice, Roll No: 101, Academic Score: 88, Sports Score: 76
 
 
 Algorithm:
