@@ -37,3 +37,25 @@ class Teacher extends Employee {
         }
     }
 }
+
+Output:
+
+
+
+
+
+
+
+
+
+
+Algorithm:
+Step 1: Create a class Employee with variables: empId, name, salary, and address.
+Step 2: Create a constructor in Employee to initialize all its variables.
+Step 3: Create a subclass Teacher that extends Employee.
+Step 4: Add extra variables in Teacher: department and subject.
+Step 5: Create a constructor in Teacher to initialize both employee and teacher details using super().
+Step 6: Write a display() method in Teacher to print all details.
+Step 7: In the main method, create an array of Teacher objects with sample data.
+Step 8: Use a loop to call the display() method for each teacher.
+Step 9: End.
