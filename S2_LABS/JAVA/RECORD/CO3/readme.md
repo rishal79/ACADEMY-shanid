@@ -1,4 +1,4 @@
-# CO2 Java Programs
+# CO3 Java Programs
 
 This directory contains Java programs that demonstrate various concepts such as method overloading, inheritance, array operations, and class structures. The following programs are included:
 
