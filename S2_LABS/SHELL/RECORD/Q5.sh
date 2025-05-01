@@ -13,6 +13,14 @@ else
 	echo "The triangle is Scalene "
 fi
 
+Output:
+Enter the sides of the triangle : 5 5 5
+The triangle is Equilateral
+
+
+
+
+
 Algorithm:
 Step 1: Ask the user to enter the sides of the triangle.
 Step 2: Store the inputs in variables a, b, and c.

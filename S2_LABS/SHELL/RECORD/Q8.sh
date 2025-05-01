@@ -20,6 +20,16 @@ else
 fi
 
 
+Output:
+Enter the value : 5
+5 is a prime number
+
+
+
+
+
+
+
 Algorithm:
 Step 1: Ask the user to enter a value and store it in variable p.
 Step 2: Check if p is equal to 1.

@@ -11,6 +11,15 @@ else
 	echo "The triangle can be formed "
 fi
 
+
+Output:
+Enter the 3 sides of triangle : 5 10 15
+The triangle cannot be formed
+
+
+
+
+
 Algorithm:
 Step 1: Ask the user to enter the three sides of the triangle.
 Step 2: Store the inputs in variables a, b, and c.

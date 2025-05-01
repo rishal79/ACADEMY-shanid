@@ -11,6 +11,12 @@ else
 fi
 
 
+Output:
+Enter the value : 5
+5 is odd
+
+
+
 Algorithm:
 Step 1: Ask the user to enter a value.
 Step 2: Store the input in a variable a.

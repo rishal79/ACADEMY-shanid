@@ -15,6 +15,9 @@ else
     echo "Good Night!"
 fi
 
+Output:
+Good Morning!
+
 
 Algorithm:
 Step 1: Get the current hour using the date command and store it in the variable hour.

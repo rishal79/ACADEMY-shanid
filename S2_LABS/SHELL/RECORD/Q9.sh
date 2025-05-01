@@ -12,6 +12,15 @@ done
 echo "The sum upto $r : $sum "
 
 
+Output:
+Enter the limit : 5
+The sum upto 5 : 15
+
+
+
+
+
+
 Algorithm:
 Step 1: Ask the user to enter a limit and store it in variable r.
 Step 2: Initialize a variable sum to 0.

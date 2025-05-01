@@ -14,6 +14,10 @@ else
 fi
 
 
+Output:
+Enter 3 numbers : 5 10 15
+15 is the largest
+
 Algorithm:
 Step 1: Ask the user to enter three numbers.
 Step 2: Store the inputs in variables a, b, and c.

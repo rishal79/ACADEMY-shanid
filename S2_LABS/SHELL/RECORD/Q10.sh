@@ -18,6 +18,12 @@ else
 fi
 echo "Factorial of $n is : $f"
 
+Output:
+Enter the Value : 5
+Factorial of 5 is : 120
+
+
+
 Algorithm:
 Step 1: Ask the user to enter a value and store it in variable n.
 Step 2: Initialize the variables f to 1 (for factorial) and i to 1.
@@ -45,6 +51,11 @@ factorial() {
 read -p "Enter a number : " n
 
 echo "Factorial of $n is: $(factorial $n)"
+
+
+Output:
+Enter a number : 5
+Factorial of 5 is: 120
 
 
 ------------------------------------

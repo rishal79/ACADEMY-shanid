@@ -13,6 +13,12 @@ else
 	echo "$l is not a leapyear"
 fi
 
+Output:
+Enter the year : 2000
+2000 is a leapyear
+
+
+
 Algorithm:
 1. Step 1: Ask the user to enter a year.
 2. Step 2: Store the input in variable `l`.
