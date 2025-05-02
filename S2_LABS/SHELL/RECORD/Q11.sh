@@ -1,4 +1,4 @@
-Q)Write a shell script program to generate a multiplication table pattern using a user-defined function.  
+Q)Write a shell script program to generate a multiplication table pattern.  
 
 
 #!/bin/bash

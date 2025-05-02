@@ -1,4 +1,4 @@
-Q)Write a shell script program to print all even numbers within a specified range.  
+Q)Write a shell script to print even numbers in a range.   
 
 
 #!/bin/bash

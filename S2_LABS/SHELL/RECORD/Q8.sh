@@ -1,4 +1,4 @@
-Q)Write a shell script program to determine if a given number is prime.  
+Q)Write a shell script to check if a number is prime. 
 
 
 #!/bin/bash

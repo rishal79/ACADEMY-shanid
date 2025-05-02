@@ -1,4 +1,4 @@
- Q)Write a shell script program to determine if a given number is odd or even.
+ Q)Write a shell script to check whether the given number is odd or even.  
 
 #!/bin/bash
 clear

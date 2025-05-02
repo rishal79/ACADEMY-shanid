@@ -1,4 +1,4 @@
-Q)Write a shell script program to calculate the sum of numbers from 1 to a user-defined limit.  
+Q) Write a shell script to find the sum of numbers up to a range.  
 
 
 #!/bin/bash

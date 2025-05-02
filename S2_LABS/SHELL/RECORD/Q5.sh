@@ -1,4 +1,4 @@
-Q)Write a shell script program to classify a triangle as isosceles, equilateral, or scalene based on its side lengths.  
+Q)Write a shell script to identify triangle type (Isosceles, Equilateral, Scalene). 
 
 #!/bin/bash
 clear

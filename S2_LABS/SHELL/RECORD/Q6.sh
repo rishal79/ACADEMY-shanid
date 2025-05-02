@@ -1,4 +1,4 @@
-Q)Write a shell script program to test if three given numbers can form the sides of a valid triangle.  
+Q)Write a shell script to test if three numbers form a triangle.    
 
 
 #!/bin/bash

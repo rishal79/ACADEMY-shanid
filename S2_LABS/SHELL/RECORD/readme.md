@@ -11,19 +11,19 @@ Write a shell script to display a given message.
 ---
 
 ### Q2  
-Write a shell script to check if a number is odd or even.  
+Write a shell script to check whether the given number is odd or even.  
 [View Program](./Q2.sh)
 
 ---
 
 ### Q3  
-Write a shell script to find the largest among three numbers.  
+Write a shell script program to check the largest among three numbers. 
 [View Program](./Q3.sh)
 
 ---
 
 ### Q4  
-Write a shell script to check for a leap year.  
+Write a shell script program to test whether given year is a leap year.  
 [View Program](./Q4.sh)
 
 ---
@@ -73,6 +73,11 @@ Write a shell script to create a multiplication table pattern.
 ### Q12  
 Write a shell script to display a message based on current time.  
 [View Program](./Q12.sh)
+
+
+### Q13
+Write a shell script program to calculate the factorial of a given number. (Using Function)
+[View Program](./Q13.sh)
 
 ---
 
