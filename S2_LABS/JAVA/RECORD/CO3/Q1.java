@@ -42,7 +42,3 @@ Step 6: Call the circle method and print the result.
 Step 7: Call the rectangle method and print the result.
 Step 8: Call the triangle method and print the result.
 Step 9: End.
-
-
-
-
