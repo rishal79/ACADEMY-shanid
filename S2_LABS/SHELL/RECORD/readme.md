@@ -76,7 +76,7 @@ Write a shell script to display a message based on current time.
 
 
 ### Q13
-Write a shell script program to calculate the factorial of a given number. (Using Function)
+Write a shell script program to calculate the factorial of a given number using Function.
 [View Program](./Q13.sh)
 
 ---
