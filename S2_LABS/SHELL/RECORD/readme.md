@@ -74,6 +74,7 @@ Write a shell script to create a multiplication table pattern.
 Write a shell script program to calculate the factorial of a given number using Function.<BR>
 [View Program](./Q12.sh)
 
+---
 
 ### Q13
 Write a shell script to display a message based on current time.  
