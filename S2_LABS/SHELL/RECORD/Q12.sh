@@ -1,28 +1,38 @@
-Q)Write a shell script program that displays a different message based on the current time of the day.  
-
+Q)Write a shell script program to calculate the factorial of a given number Using Function .
 
 #!/bin/bash
 clear
-hour=$(date +"%H")
+factorial() {
+  f=1
+  i=1
+  while [ $i -le $1 ]; do
+    f=$((f * i))
+    ((i++))
+  done
+  echo $f
+}
 
-if [ $hour -ge 5 ] && [ $hour -lt 12 ]; then
-    echo "Good Morning!"
-elif [ $hour -ge 12 ] && [ $hour -lt 18 ]; then
-    echo "Good Afternoon!"
-elif [ $hour -ge 18 ] && [ $hour -lt 21 ]; then
-    echo "Good Evening!"
-else
-    echo "Good Night!"
-fi
+read -p "Enter a number : " n
+
+echo "Factorial of $n is: $(factorial $n)"
+
 
 Output:
-Good Morning!
+Enter a number : 5
+Factorial of 5 is: 120
+
+
+------------------------------------
 
 
 Algorithm:
-Step 1: Get the current hour using the date command and store it in the variable hour.
-Step 2: Check if the hour is between 5 and 12 (morning).
-If true, print "Good Morning!".
-Step 3: If the hour is between 12 and 18 (afternoon), print "Good Afternoon!".
-Step 4: If the hour is between 18 and 21 (evening), print "Good Evening!".
-Step 5: If none of the above conditions are true, print "Good Night!".
+
+Factorial :
+Step 1: Initialize f to 1 and i to 1.
+Step 2: Use a loop to multiply f by i until i reaches the input number.
+Step 3: Return the value of f.
+
+Main :
+Step 1: Ask the user to enter a number and store it in variable n.
+Step 2: Call the factorial function with n as the argument.
+Step 3: Display the result returned by the factorial function.
