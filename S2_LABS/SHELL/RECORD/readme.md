@@ -1,6 +1,6 @@
 # Shell Scripting Lab Programs
 
-This repository contains 12 basic shell scripting exercises that help in practicing scripting, automation, conditional logic, and loop structures.
+This repository contains 13 basic shell scripting exercises that help in practicing scripting, automation, conditional logic, and loop structures.
 
 ---
 
