@@ -39,4 +39,18 @@ This directory contains Java programs that demonstrate various concepts such as 
 
 ---
 
+### Q6  
+**Create an interface having the prototype of functions `area()` and `perimeter()`. Create two classes, Circle and Rectangle, which implement the above interface. Create a menu-driven program to find the area and perimeter of the object.**  
+
+[View program](./Q6.java)
+
+---
+
+### Q7  
+**Prepare a bill with the given format using the `calculate` method from the interface.**  
+
+[View program](./Q7.java)
+
+---
+
 This directory provides solutions to common object-oriented programming problems using Java, showcasing concepts like inheritance, method overloading, constructors, and array handling.
