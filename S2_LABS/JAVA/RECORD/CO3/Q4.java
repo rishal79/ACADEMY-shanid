@@ -56,10 +56,9 @@ Fiction - Title: Harry Potter, Publisher: HarperCollins
 
 Algorithm:
 
-Step 1: Create a Person class with attributes: name, gender, address, and age.
-Step 2: Create an Employee class that extends Person and adds: empId, companyName, qualification, and salary.
-Step 3: Create a Teacher class that extends Employee and adds: subject, department, and teacherId.
-Step 4: Define constructors in each class to initialize their respective variables.
-Step 5: Implement the display() method in the Teacher class to print all details.
-Step 6: In the main method, create an array of Teacher objects with sample data and loop through them to call the display() method.
-Step 7: End.
+step1: Define a class Publisher with a variable publisher and constructor to initialize it.
+step2: Define a class Book that extends Publisher and adds a title variable with constructor.
+step3: Create Literature class extending Book, with a display() method to print literature book details.
+step4: Create Fiction class extending Book, with a display() method to print fiction book details.
+step5: In main(), create one Literature and one Fiction object.
+step6: Call display() methods for both objects to show their details.
