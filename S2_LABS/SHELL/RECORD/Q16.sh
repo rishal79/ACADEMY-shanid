@@ -2,23 +2,42 @@ Q)Shell script to count the number of words and lines in a file
 
 
 Code:
-#!/bin/bash
-clear
-file="$1"
-lines=$(wc -l < "$file")
-words=$(wc -w < "$file")
-echo "File: $file"
-echo "Number of lines: $lines"
-echo "Number of words: $words"
+if [ $# -gt 1 ]
+then
+        echo "syntax is <$0> [<filename>]"
+        exit 1
+fi
+flag=0
+if [ $# -eq 1 ]
+then
+        term=`tty`
+        exec <$1
+fi
+while read line
+do
+        no1=` expr $no1 + 1 `
+        set $line>/dev/null
+        nowds=` expr $nowds + $# `
+done
+echo "numbrer of lines=$no1"
+echo "number of words=$nowds"
+if [ $flag -eq 1 ]
+then
+        exec < $term
+fi
+exit 0
 
 
 Algorithm:
-Step 1: Assign the file path to file.
-Step 2: Count lines in file and store in lines.
-Step 3: Count words in file and store in words.
-Step 4: Print the file name.
-Step 5: Print the number of lines.
-Step 6: Print the number of words.
+Step 1: If more than one argument, show syntax and exit.
+Step 2: Set line and word counters to 0.
+Step 3: If filename given, read input from it.
+Step 4: For each line:
+ – Increase line count.
+ – Count words and add to total.
+Step 5: Print line and word counts.
+Step 6: Restore terminal input if changed.
+Step 7: Exit program.
 
 
 Input:
@@ -26,7 +45,6 @@ $ sh wordcount.sh file1.txt
 
 
 Output:
-File: file1.txt
-Number of lines: 1
-Number of words: 3
+numbrer of lines=2
+number of words=4
 

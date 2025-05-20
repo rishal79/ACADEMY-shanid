@@ -3,36 +3,36 @@ Q)Shell script to compare two files. If the files are identical delete one
 
 Code:
 
-#!/bin/bash
-clear
-file1="$1"
-file2="$2"
-# Compare the files
-if cmp -s "$file1" "$file2"; then
-  echo "Files are identical. Deleting '$file2'."
-  rm "$file2"
+if [ $# -ne 2 ]
+then
+        echo "Syntax is <$0> <file1> <file2>"
+elif [ -f $1 -a -f $2 ]
+then
+        cmp $1 $2 >/dev/null
+        if [ $? -eq 0 ]
+        then
+                echo " the file $1 and $2 are same"
+                rm -f $1
+                echo "$1 deleted"
+        else
+                echo "$1 and $2 are not same"
+        fi
 else
-  echo "Files are different. No action taken."
+        echo "files are not ordinary files"
 fi
 
 
-
 Algorithm:
-Step 1: Assign the first command-line argument to the variable file1.
-Step 2: Assign the second command-line argument to the variable file2.
-Step 3: Use the cmp command with the -s (silent) option to compare file1 and file2.
-Step 4: If the files are identical:
-        Print a message stating that the files are identical.
-        Delete file2.
-Step 5: If the files are different:
-        Print a message stating that the files are different.
-        Do not delete any files.
-
+Step 1: If args ≠ 2, show syntax and exit.
+Step 2: If both are regular files, compare them.
+Step 3: If same, show message, delete first file.
+Step 4: If not same, show message.
+Step 5: If not regular, show error.
+Step 6: End.
 
 Input:
 sh compare.sh file1.txt file2.txt
 
 
 Output:
-Files are different. No action taken.
-
+c.sh and b.sh are not same

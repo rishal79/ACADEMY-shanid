@@ -2,14 +2,22 @@ Q)Shell script to rename all ordinary files in a directory with filename.PID of 
 
 
 code:
-#!/bin/bash
-clear
-PID=$$
-for file in *; do
-  if [ -f "$file" ]; then
-    mv "$file" "$file.$PID"
-  fi
-done
+if [ $# -gt 1 ]
+then
+        echo "Syntax is<$0><location>or<$0>"
+        exit 1
+fi
+if [ $# -ne 0 ]
+then
+        cd$1
+fi
+for i in *
+do
+if [ -f $i ]
+then
+        mv $i $i.$$
+        echo "file renamed to .$$ "
+        fi
 
 Input:
 sh rename.sh
@@ -19,11 +27,10 @@ Output:
 rename.sh.790*
 
 Algorithm:
-Step 1: Clear the terminal screen.
-Step 2: Get the current process ID (PID) of the script.
-Step 3: Store the PID in a variable named PID.
-Step 4: Loop through each item in the current directory.
-Step 5: For each item, check if it is a regular file.
-Step 6: If it is a regular file, rename (move) the file by appending .$PID to its filename.
-Step 7: If it is not a regular file, do nothing and continue with the next item.
-Step 8: Repeat steps 5–7 until all items have been processed.
+Step 1: Check if the number of arguments is greater than 1.
+        If true, print a syntax error message and exit.
+Step 2: If exactly 1 argument is provided, change the current directory to the specified location.
+Step 3: Use a for loop to go through each item in the current directory.
+Step 4: For each item, check if it is a regular file.
+        If true, rename the file by appending the current process ID ($$) to its name.
+Step 5: After renaming, print a message showing the new file name.

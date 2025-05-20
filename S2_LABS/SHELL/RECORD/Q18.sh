@@ -3,17 +3,35 @@ Q)Shell script to delete all lines if a file containing word linux
 
 Code:
 
-#!/bin/bash
-clear
-file="$1"
-sed -i '/linux/d' "$file"
-echo "Lines containing 'linux' have been deleted from '$file'."
+if [ $# -ne 2 ]
+then
+        echo " syntax is<$0><string><filename>"
+        exit 1
+fi
+term=`tty`
+exec<$2
+while read line
+do
+        echo $line | grep $1>/dev/null
+        echo $line | grep -w $1>/dev/null
+        if [ $? -ne 0 ]
+        then
+                echo $line >>temp
+        fi
+done
+exec<$term
+mv temp $2
 
 
 Algorithm:
-Step 1: Assign the first command-line argument to file.
-Step 2: Use sed -i to delete lines containing the word "linux" from file.
-Step 3: Print a message confirming that lines containing "linux" have been deleted from file.
+Step 1: If args ≠ 2, show syntax and exit.
+Step 2: Save current terminal name to term.
+Step 3: Redirect input from the given file.
+Step 4: For each line: check if it has the exact word.
+Step 5: If not matched exactly, add line to temp.
+Step 6: Restore input back to terminal.
+Step 7: Replace original file with temp.
+Step 8: End.
 
 
 Input:
@@ -26,4 +44,10 @@ sh linux.sh file3.txt
 
 
 Output:
-Lines containing 'linux' have been deleted from 'file3.txt'.
+
+vi file3.txt
+
+--------------------------file3.txt----------------------
+Line without the word
+
+----------------------------------------------------------------
