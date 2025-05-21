@@ -1,9 +1,6 @@
-# 🍃 MongoDB Basic Syntax Cheat Sheet
+# 📘 MongoDB Basic Syntax Cheat Sheet
 
----
-
-## 📦 Database Operations
-
+## 🔹 1. Database Commands
 ```js
 // Show all databases
 show dbs
@@ -14,16 +11,15 @@ use database_name
 // Show current database
 db
 
-// Drop the current database
+// Drop a database
 db.dropDatabase()
 ```
 
 ---
 
-## 📋 Collection Operations
-
+## 🔹 2. Collection Commands
 ```js
-// Show all collections
+// Show collections (like tables)
 show collections
 
 // Create a collection
@@ -35,23 +31,21 @@ db.collection_name.drop()
 
 ---
 
-## 📝 Document Operations
-
-### 🔹 Insert Documents
-
+## 🔹 3. Insert Documents
 ```js
-// Insert a single document
+// Insert one document
 db.collection_name.insertOne({ key1: value1, key2: value2 })
 
-// Insert multiple documents
+// Insert many documents
 db.collection_name.insertMany([
-  { key1: value1, key2: value2 },
-  { key1: value3, key2: value4 }
+  { key1: value1 },
+  { key1: value2 }
 ])
 ```
 
-### 🔹 Query Documents
+---
 
+## 🔹 4. Find / Query Documents
 ```js
 // Find all documents
 db.collection_name.find()
@@ -59,123 +53,134 @@ db.collection_name.find()
 // Find with condition
 db.collection_name.find({ key: value })
 
-// Find one document
-db.collection_name.findOne({ key: value })
-
-// Projection (select specific fields)
-db.collection_name.find({}, { key1: 1, key2: 1 })
+// Pretty print results
+db.collection_name.find().pretty()
 ```
 
-### 🔹 Update Documents
+---
 
+## 🔹 5. Update Documents
 ```js
 // Update one document
 db.collection_name.updateOne(
-  { key: value },
-  { $set: { key_to_update: new_value } }
+  { key: value }, // filter
+  { $set: { key: new_value } } // update
 )
 
-// Update multiple documents
+// Update many documents
 db.collection_name.updateMany(
   { key: value },
-  { $set: { key_to_update: new_value } }
+  { $set: { key: new_value } }
 )
 ```
 
-### 🔹 Delete Documents
+---
 
+## 🔹 6. Delete Documents
 ```js
 // Delete one document
 db.collection_name.deleteOne({ key: value })
 
-// Delete multiple documents
+// Delete many documents
 db.collection_name.deleteMany({ key: value })
 ```
 
 ---
 
-## 🔍 Query Operators
-
+## 🔹 7. Query Operators
 ```js
-// Comparison
-$eq, $ne, $gt, $gte, $lt, $lte, $in, $nin
+// Greater than, less than
+{ age: { $gt: 18 } }
+{ age: { $lt: 30 } }
 
-// Logical
-$and, $or, $not, $nor
+// AND / OR
+{ $and: [ { age: { $gt: 18 } }, { city: "Delhi" } ] }
+{ $or: [ { city: "Delhi" }, { city: "Mumbai" } ] }
 
-// Element
-$exists, $type
+// IN / NOT IN
+{ city: { $in: ["Delhi", "Mumbai"] } }
+{ city: { $nin: ["Chennai"] } }
 
-// Evaluation
-$regex, $expr
-```
-
-### Examples
-
-```js
-// Find documents with age > 25
-db.users.find({ age: { $gt: 25 } })
-
-// Find with multiple conditions
-db.users.find({ $and: [ { age: { $gte: 18 } }, { status: "active" } ] })
+// NOT
+{ age: { $not: { $gt: 25 } } }
 ```
 
 ---
 
-## 🧩 Indexing
-
+## 🔹 8. Projection (Select Fields)
 ```js
-// Create an index
-db.collection_name.createIndex({ field: 1 })  // 1 = ascending, -1 = descending
+// Include only name and age
+db.collection_name.find({}, { name: 1, age: 1 })
 
-// Drop an index
-db.collection_name.dropIndex({ field: 1 })
-
-// View indexes
-db.collection_name.getIndexes()
+// Exclude _id
+db.collection_name.find({}, { name: 1, _id: 0 })
 ```
 
 ---
 
-## 🔐 Users and Roles (Admin Operations)
-
+## 🔹 9. Sorting and Limiting
 ```js
-// Create user with roles
-db.createUser({
-  user: "username",
-  pwd: "password",
-  roles: [ { role: "readWrite", db: "database_name" } ]
-})
+// Sort by age ascending
+db.collection_name.find().sort({ age: 1 })
 
-// Show users
-db.getUsers()
+// Sort by age descending
+db.collection_name.find().sort({ age: -1 })
 
-// Drop a user
-db.dropUser("username")
+// Limit results
+db.collection_name.find().limit(5)
+
+// Skip results
+db.collection_name.find().skip(5)
 ```
 
 ---
 
-## 📎 Miscellaneous
-
+## 🔹 10. Aggregation (Basic)
 ```js
-// Count documents
-db.collection_name.countDocuments()
+// Group by field and count
+db.collection_name.aggregate([
+  { $group: { _id: "$city", total: { $sum: 1 } } }
+])
 
-// Limit and sort
-db.collection_name.find().limit(5).sort({ field: 1 })
-
-// Aggregation framework (example)
+// Match + group example
 db.collection_name.aggregate([
   { $match: { status: "active" } },
-  { $group: { _id: "$category", total: { $sum: 1 } } }
+  { $group: { _id: "$city", count: { $sum: 1 } } }
 ])
 ```
 
 ---
 
-## 🧠 Notes
+## 🔹 11. Indexing
+```js
+// Create index
+db.collection_name.createIndex({ key: 1 })   // 1 = ASC, -1 = DESC
 
-- MongoDB stores data in **BSON** (binary JSON) format.
-- Collections are schema-less — each document can have a different structure.
-- Common data types: `String`, `Number`, `Object`, `Array`, `Date`, `Boolean`, `Null`.
+// View indexes
+db.collection_name.getIndexes()
+
+// Drop index
+db.collection_name.dropIndex("key_1")
+```
+
+---
+
+## 🔹 12. Common Commands
+```js
+// Count documents
+db.collection_name.countDocuments()
+
+// Distinct values of a field
+db.collection_name.distinct("fieldname")
+
+// Rename collection
+db.collection_name.renameCollection("new_name")
+
+// Drop entire collection
+db.collection_name.drop()
+```
+
+---
+
+🧠 *MongoDB stores data as BSON (Binary JSON), and operations are performed using JavaScript-like syntax in the shell.*
+
