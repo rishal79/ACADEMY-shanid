@@ -40,6 +40,7 @@ Step 6: While l ≥ 1:
 Step 7: End.
 
 Input:
+vi file1.txt
 ----------------------create file1.txt--------------------
 Hello good morning!
 This is the first line
@@ -51,6 +52,7 @@ sh reverse.sh file1.txt
 
 
 Output:
+vi file1.txt
 ----------------------file1.txt.rev--------------------
 This is the second line
 This is the first line

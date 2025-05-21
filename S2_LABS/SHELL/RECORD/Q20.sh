@@ -32,7 +32,7 @@ This is the Third line
 sh range.sh file1.txt 2-3
 
 Output:
-lines from 2 to 6 from Q8.sh
+lines from 2 to 3 from Q8.sh
 
 This is the Second line
 This is the Third line
