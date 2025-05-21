@@ -1,4 +1,4 @@
-# 📘 MongoDB Basic Syntax Cheat Sheet
+# 🍃 MongoDB Basic Syntax Cheat Sheet
 
 ## 🔹 1. Database Commands
 ```js
