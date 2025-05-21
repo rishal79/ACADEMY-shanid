@@ -2,212 +2,172 @@
 
 ---
 
-## 🗄️ Database Operations
-
+## 🔹 1. Database Commands
 ```sql
--- Create a database
 CREATE DATABASE database_name;
-
--- Use a database
 USE database_name;
-
--- Delete a database
+SHOW DATABASES;
 DROP DATABASE database_name;
 ```
 
----
-
-## 📋 Table Operations
-
+## 🔹 2. Table Commands
 ```sql
--- Create a table
 CREATE TABLE table_name (
-    column1 datatype,
-    column2 datatype,
-    ...
+  column1 datatype,
+  column2 datatype,
+  ...
 );
-
--- View the structure of a table
+SHOW TABLES;
 DESCRIBE table_name;
-
--- Rename a table
-RENAME TABLE old_name TO new_name;
-
--- Delete a table
 DROP TABLE table_name;
 ```
 
----
-
-## 📝 Data Manipulation
-
-### 🔹 Insert Data
-
+## 🔹 3. Data Types (Common)
 ```sql
-INSERT INTO table_name (column1, column2, ...)
-VALUES (value1, value2, ...);
+-- Numbers
+INT, FLOAT, DOUBLE
+
+-- Strings
+CHAR(n), VARCHAR(n), TEXT
+
+-- Date/Time
+DATE, DATETIME, TIMESTAMP
+
+-- Boolean
+BOOLEAN (TINYINT(1))
 ```
 
-### 🔹 Select Data
-
+## 🔹 4. Insert, Update, Delete
 ```sql
-SELECT column1, column2 FROM table_name;
-
--- Select all columns
-SELECT * FROM table_name;
-
--- With a condition
-SELECT * FROM table_name WHERE condition;
-```
-
-### 🔹 Update Data
-
-```sql
-UPDATE table_name
-SET column1 = value1, column2 = value2
-WHERE condition;
-```
-
-### 🔹 Delete Data
-
-```sql
+INSERT INTO table_name (column1, column2) VALUES (value1, value2);
+UPDATE table_name SET column1 = value1 WHERE condition;
 DELETE FROM table_name WHERE condition;
 ```
 
----
-
-## 🔍 Conditions and Clauses
-
+## 🔹 5. Select Queries
 ```sql
--- WHERE clause
-SELECT * FROM table_name WHERE column = value;
+SELECT * FROM table_name;
+SELECT column1, column2 FROM table_name;
+SELECT * FROM table_name WHERE condition;
+```
 
--- ORDER BY
-SELECT * FROM table_name ORDER BY column ASC|DESC;
+## 🔹 6. Filtering Conditions
+```sql
+SELECT * FROM table WHERE age > 18 AND city = 'Delhi';
+SELECT * FROM table WHERE name LIKE 'A%';
+SELECT * FROM table WHERE age BETWEEN 18 AND 25;
+SELECT * FROM table WHERE city IN ('Delhi', 'Mumbai');
+```
 
--- LIMIT
-SELECT * FROM table_name LIMIT number;
+## 🔹 7. Sorting and Limiting
+```sql
+SELECT * FROM table ORDER BY column ASC;
+SELECT * FROM table ORDER BY column DESC;
+SELECT * FROM table LIMIT 5;
+SELECT * FROM table LIMIT 5 OFFSET 10;
+```
 
--- LIKE for pattern matching
-SELECT * FROM table_name WHERE column LIKE 'pattern%';
+## 🔹 8. Constraints (On Table Creation)
+```sql
+id INT PRIMARY KEY,
+email VARCHAR(100) UNIQUE,
+name VARCHAR(50) NOT NULL,
+age INT DEFAULT 18,
+FOREIGN KEY (dept_id) REFERENCES departments(id),
+CHECK (age >= 18)
+```
 
--- IN clause
-SELECT * FROM table_name WHERE column IN (value1, value2, ...);
+## 🔹 9. Alter Table
+```sql
+ALTER TABLE table_name ADD column_name datatype;
+ALTER TABLE table_name MODIFY column_name new_datatype;
+ALTER TABLE table_name DROP COLUMN column_name;
+```
 
--- BETWEEN
-SELECT * FROM table_name WHERE column BETWEEN value1 AND value2;
+## 🔹 10. Aliases
+```sql
+SELECT salary AS monthly_salary FROM employees;
+SELECT e.name FROM employees AS e;
+```
+
+## 🔹 11. Aggregate Functions
+```sql
+SELECT COUNT(*) FROM students;
+SELECT SUM(marks), AVG(marks) FROM students;
+SELECT MAX(marks), MIN(marks) FROM students;
+```
+
+## 🔹 12. GROUP BY and HAVING
+```sql
+SELECT city, COUNT(*) FROM users GROUP BY city;
+SELECT city, COUNT(*) FROM users GROUP BY city HAVING COUNT(*) > 5;
+```
+
+## 🔹 13. DISTINCT
+```sql
+SELECT DISTINCT city FROM users;
+```
+
+## 🔹 14. NULL Handling
+```sql
+SELECT * FROM users WHERE email IS NULL;
+SELECT * FROM users WHERE email IS NOT NULL;
+```
+
+## 🔹 15. Simple Join (INNER JOIN)
+```sql
+SELECT orders.id, customers.name
+FROM orders
+INNER JOIN customers ON orders.customer_id = customers.id;
+```
+
+## 🔹 16. String Functions
+```sql
+SELECT LENGTH(name), UPPER(name), LOWER(name) FROM users;
+SELECT CONCAT(first_name, ' ', last_name) FROM users;
+```
+
+## 🔹 17. Date Functions
+```sql
+SELECT NOW(), CURDATE(), CURTIME();
+SELECT YEAR(birthdate), MONTH(birthdate), DAY(birthdate) FROM users;
+```
+
+## 🔹 18. Rename Table and Column
+```sql
+RENAME TABLE old_name TO new_name;
+ALTER TABLE table_name CHANGE old_column new_column datatype;
+```
+
+## 🔹 19. SHOW Commands
+```sql
+SHOW TABLES;
+SHOW DATABASES;
+DESCRIBE table_name;
+```
+
+## 🔹 20. Constraint Manipulation
+
+### Add Constraints After Table Creation
+```sql
+ALTER TABLE students ADD PRIMARY KEY (id);
+ALTER TABLE students ADD UNIQUE (email);
+ALTER TABLE students MODIFY name VARCHAR(100) NOT NULL;
+ALTER TABLE students ALTER age SET DEFAULT 18;
+ALTER TABLE students ADD CONSTRAINT chk_age CHECK (age >= 18);
+ALTER TABLE students ADD CONSTRAINT fk_class FOREIGN KEY (class_id) REFERENCES classes(id);
+```
+
+### Drop Constraints
+```sql
+ALTER TABLE students DROP PRIMARY KEY;
+ALTER TABLE students DROP INDEX email;
+ALTER TABLE students MODIFY name VARCHAR(100);
+ALTER TABLE students ALTER age DROP DEFAULT;
+ALTER TABLE students DROP CHECK chk_age;
+ALTER TABLE students DROP FOREIGN KEY fk_class;
 ```
 
 ---
 
-## 🔗 Joins
-
-```sql
--- INNER JOIN
-SELECT * FROM table1
-INNER JOIN table2 ON table1.column = table2.column;
-
--- LEFT JOIN
-SELECT * FROM table1
-LEFT JOIN table2 ON table1.column = table2.column;
-
--- RIGHT JOIN
-SELECT * FROM table1
-RIGHT JOIN table2 ON table1.column = table2.column;
-```
-
----
-
-## 🔐 User and Privileges
-
-```sql
--- Create a user
-CREATE USER 'username'@'host' IDENTIFIED BY 'password';
-
--- Grant privileges
-GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'host';
-
--- Apply changes
-FLUSH PRIVILEGES;
-```
-
----
-
-## 📌 Constraints
-
-Constraints help maintain data accuracy and integrity in the database.
-
-- `NOT NULL`: Prevents NULL values.
-- `UNIQUE`: Ensures all values in a column are different.
-- `PRIMARY KEY`: Combines `NOT NULL` and `UNIQUE`. Only one per table.
-- `FOREIGN KEY`: Enforces referential integrity.
-- `CHECK`: Ensures data meets a condition.
-- `DEFAULT`: Sets a default value.
-
----
-
-## 🏗️ Adding Constraints During Table Creation
-
-```sql
-CREATE TABLE employees (
-    emp_id INT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE,
-    age INT CHECK (age >= 18),
-    department_id INT,
-    FOREIGN KEY (department_id) REFERENCES departments(department_id)
-);
-```
-
----
-
-## ➕ Adding Constraints to Existing Tables
-
-```sql
--- Add a Primary Key
-ALTER TABLE employees
-ADD PRIMARY KEY (emp_id);
-
--- Add a Unique Constraint
-ALTER TABLE employees
-ADD CONSTRAINT unique_email UNIQUE (email);
-
--- Add a Check Constraint
-ALTER TABLE employees
-ADD CONSTRAINT check_age CHECK (age >= 18);
-
--- Add a Foreign Key
-ALTER TABLE employees
-ADD CONSTRAINT fk_dept
-FOREIGN KEY (department_id) REFERENCES departments(department_id);
-```
-
----
-
-## ❌ Dropping Constraints
-
-```sql
--- Drop Primary Key
-ALTER TABLE employees
-DROP PRIMARY KEY;
-
--- Drop Unique Constraint
-ALTER TABLE employees
-DROP INDEX unique_email;
-
--- Drop Check Constraint (MySQL 8.0+)
-ALTER TABLE employees
-DROP CHECK check_age;
-
--- Drop Foreign Key
-ALTER TABLE employees
-DROP FOREIGN KEY fk_dept;
-```
-
----
-
-## 📎 Notes on Foreign Keys
-
-- Foreign keys must reference a column that is a `PRIMARY KEY` or `UNIQUE`.
-- Both tables must use the same storage engine (InnoDB is required).
-- Data types of both columns must match or be compatible.
+🧠 *Keep practicing these commands in a MySQL terminal or a GUI like phpMyAdmin, MySQL Workbench, or db-fiddle.*
