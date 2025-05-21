@@ -35,4 +35,4 @@ sh compare.sh file1.txt file2.txt
 
 
 Output:
-c.sh and b.sh are not same
+file1.txt and file2.txt are not same
