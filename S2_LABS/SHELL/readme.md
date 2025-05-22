@@ -1,80 +1,80 @@
-# Shell Script Terms - Simple Explanations
+# Simple Shell Script Commands and Terms
 
-This document explains common terms, symbols, and commands used in shell scripts with easy-to-understand definitions. Useful for beginners learning shell scripting.
-
----
-
-## General Variables
-
-| Term     | Meaning                    | Explanation |
-|----------|----------------------------|-------------|
-| `$0`     | Script name                | Shows the name of the script file itself. |
-| `$1`, `$2`, etc. | Positional arguments | Inputs passed when the script is run. Example: `sh script.sh file1 file2` → `$1 = file1`, `$2 = file2`. |
-| `$#`     | Number of arguments         | Tells how many arguments were passed. |
-| `$$`     | Process ID (PID)            | A unique number for the running script process. Often used to make file names unique. |
-| `$?`     | Exit status of last command | `0` means success, non-zero means error. |
-| `$*`     | All arguments               | Refers to all input arguments. |
-| `shift`  | Shift arguments             | Moves argument list left by one. `$2` becomes `$1`, and so on. |
+This guide explains common shell script commands in simple words. Great for beginners!
 
 ---
 
-## File Test Operators
+## Basic Special Words (Variables)
 
-| Term     | Meaning             | Explanation |
-|----------|---------------------|-------------|
-| `-f`     | Is a regular file   | True if it's a normal file. |
-| `-d`     | Is a directory      | True if it's a folder. |
-| `-a`     | Logical AND         | True if both conditions are true. |
-| `-ne`    | Not equal           | Compares numbers. |
-| `-gt`    | Greater than        | Example: `[ $# -gt 1 ]` means more than 1 argument. |
-| `-eq`    | Equal to            | True if numbers are equal. |
-| `-le`    | Less than or equal  | Used to compare numbers. |
-| `! -f`   | Not a file          | True if file doesn't exist or is not a regular file. |
-
----
-
-## Commands
-
-| Command      | Use                          | Explanation |
-|--------------|------------------------------|-------------|
-| `echo`       | Display message              | Prints text on the screen. |
-| `cd`         | Change directory             | Moves to another folder. |
-| `mv`         | Move or rename               | Renames or moves files. |
-| `rm`         | Remove file                  | Deletes a file. `-f` means force delete without prompt. |
-| `cmp`        | Compare files                | Compares contents of two files. |
-| `wc -l`      | Count lines                  | Tells number of lines in a file. |
-| `wc -c`      | Count bytes                  | Shows size of file in characters (bytes). |
-| `tail -n`    | Show last lines              | Displays last `n` lines. |
-| `head -n`    | Show top lines               | Displays first `n` lines. |
-| `tty`        | Terminal name                | Shows current terminal name. |
-| `set $line`  | Break line into words        | Turns a line into separate word arguments. |
-| `grep`       | Search for pattern in text   | Finds lines that contain a specific word or phrase. |
-| `read`       | Read user input              | Reads a line from the user. |
-| `read line`  | Read input line-by-line      | Reads one line and stores it in `line`. |
-| `exec < file`| Redirect input               | Makes shell read from a file instead of keyboard. |
-| `date -r`    | File timestamp               | Gets last modified time of a file. |
-| `cut -d`     | Split line by delimiter      | Cuts part of a line by a character like space. |
-| `expr`       | Arithmetic                   | Used for doing basic math like addition/subtraction. |
-| `cp`         | Copy files                   | Copies one file to another. |
-| `cat`        | Show file content            | Displays content of a file. |
-| `=`          | String comparison            | Checks if two strings are the same. |
+| Term     | Meaning                   | Simple Explanation |
+|----------|---------------------------|--------------------|
+| `$0`     | Script name               | The name of the script file itself. |
+| `$1`, `$2` | First and second inputs | If you give input when running the script, these hold them. Example: `sh script.sh file1 file2` → `$1 = file1`, `$2 = file2`. |
+| `$#`     | Number of inputs          | Tells how many inputs were given to the script. |
+| `$$`     | Script process number     | A unique number for the running script. Helpful for naming files so they don't clash. |
+| `$?`     | Result of last command    | `0` means success, any other number means error. |
+| `$*`     | All input values          | Shows all the inputs together. |
+| `shift`  | Move inputs               | Moves input list to the left. `$2` becomes `$1`, and so on. |
 
 ---
 
-## Flow Control and Loops
+## Checking Files and Numbers
 
-| Keyword      | Use                   | Explanation |
-|--------------|------------------------|-------------|
-| `if`, `then`, `else`, `elif`, `fi` | Conditional blocks | Run commands only if certain conditions are met. |
-| `for f in *` | Loop through items     | Repeats code for each item in a list (e.g., each file). |
-| `while ... do ... done` | Loop while condition is true | Repeats the block until the condition becomes false. |
-| `exit`       | Exit the script        | Ends the script early with optional status code. |
+| Term     | Meaning            | Simple Explanation |
+|----------|--------------------|--------------------|
+| `-f`     | Is file            | Checks if something is a normal file. |
+| `-d`     | Is folder          | Checks if something is a folder. |
+| `-a`     | And condition      | Used when checking two things at once. |
+| `-ne`    | Not equal          | Checks if two numbers are different. |
+| `-eq`    | Equal              | Checks if two numbers are same. |
+| `-gt`    | Greater than       | Checks if one number is bigger than another. |
+| `-le`    | Less or equal      | Checks if one number is smaller or same. |
+| `! -f`   | Not a file         | True if it's not a file. |
 
 ---
 
-## Useful Snippets and Their Purpose
+## Common Commands
 
-### Print Windows-style Directory View
+| Command    | Use                        | Simple Explanation |
+|------------|----------------------------|--------------------|
+| `echo`     | Show message               | Displays text on the screen. |
+| `cd`       | Go to another folder       | Changes the folder. |
+| `mv`       | Rename or move file        | Renames or moves a file. |
+| `rm`       | Delete file                | Removes a file. `-f` means delete without asking. |
+| `cmp`      | Compare two files          | Checks if two files are the same. |
+| `wc -l`    | Count lines in a file      | Tells how many lines are in the file. |
+| `wc -c`    | Count characters           | Tells how big the file is in characters. |
+| `tail -n`  | Show last lines            | Shows last `n` lines of a file. |
+| `head -n`  | Show first lines           | Shows first `n` lines of a file. |
+| `tty`      | Get terminal name          | Shows the name of the terminal (screen). |
+| `set $line`| Split line into words      | Turns a line into words. |
+| `grep`     | Search in text             | Looks for a word in text. |
+| `read`     | Get input from user        | Lets user type something. |
+| `exec < file` | Use file as input       | Makes the script read from a file, not from keyboard. |
+| `date -r`  | Get file’s date and time   | Shows when the file was last changed. |
+| `cut -d`   | Split using symbol         | Cuts a part of line using a symbol like space or comma. |
+| `expr`     | Do math                    | Does simple math like adding or subtracting. |
+| `cp`       | Copy files                 | Makes a copy of a file. |
+| `cat`      | Show file content          | Shows what’s inside a file. |
+| `=`        | Compare words              | Checks if two words are the same. |
+
+---
+
+## Controlling the Script
+
+| Word       | Meaning            | Simple Explanation |
+|------------|--------------------|--------------------|
+| `if`, `then`, `else`, `fi` | Make decisions | Runs certain lines only if some condition is true. |
+| `elif`     | Else if            | Checks another condition if the first one failed. |
+| `for`      | For loop           | Repeats some lines for each file or value. |
+| `while`    | While loop         | Repeats some lines while a condition is true. |
+| `exit`     | Stop script        | Ends the script. |
+
+---
+
+## Example Uses (Snippets)
+
+### Show files like Windows
 ```sh
 for f in *
 do
