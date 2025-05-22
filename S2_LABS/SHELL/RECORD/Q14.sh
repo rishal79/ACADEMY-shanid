@@ -18,7 +18,7 @@ then
         mv $i $i.$$
         echo "file renamed to .$$ "
         fi
-
+done
 Input:
 sh rename.sh
 ls
