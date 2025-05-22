@@ -24,7 +24,13 @@ sh rename.sh
 ls
 
 Output:
-rename.sh.790*
+file renamed to .790
+
+
+
+
+
+#rename.sh.790*
 
 Algorithm:
 Step 1: Check if the number of arguments is greater than 1.
