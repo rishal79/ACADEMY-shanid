@@ -10,7 +10,7 @@ then
 fi
 if [ -d $1 ]
 then
-        echo " $1 is a dictionary"
+        echo " $1 is a directory"
         exit 2
 fi
 cp $1 file
