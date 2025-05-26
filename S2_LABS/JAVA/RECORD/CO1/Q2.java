@@ -13,7 +13,6 @@ row=sc.nextInt();
 col=sc.nextInt();
 int a[][]=new int[row][col];
 int b[][]=new int[row][col];
-int sum[][]=new int[row][col];
 
 System.out.println("Enter the elements first matrix : ");
 for(i=0;i<row;i++){
