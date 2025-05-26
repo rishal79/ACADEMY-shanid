@@ -12,7 +12,6 @@ public class symmetricmatrix
             System.out.print("Enter The size of a matrix: ");
             int r=sc.nextInt();
             int[][]a=new int[r][r];
-            int[][]b=new int[r][r];
             System.out.println("Enter the matrix elements: ");
             for(i=0;i<r;i++)
                 {
