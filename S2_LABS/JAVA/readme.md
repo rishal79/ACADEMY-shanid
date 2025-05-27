@@ -287,7 +287,7 @@ try {
 
 ## 15. Summary Table
 
-```
+
 
 | Topic              | Syntax Example                                        | Description                            |
 | ------------------ | ----------------------------------------------------- | -------------------------------------- |
@@ -307,5 +307,3 @@ try {
 | Exception Handling | `try { } catch (Exception e) {}`                      | Handle runtime errors                  |
 
 
-
-```
