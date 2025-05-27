@@ -1,23 +1,6 @@
 # Simple Java Syntax Guide with Code Examples
 
----
-
-## Table of Contents
-1. [Inheritance (`extends`)](#1-inheritance-extends)
-2. [Interfaces (`implements`)](#2-interfaces-implements)
-3. [Method Overriding](#3-method-overriding)
-4. [Abstract Classes](#4-abstract-classes)
-5. [Constructors](#5-constructors)
-6. [Method Overloading](#6-method-overloading)
-7. [Packages and Import](#7-packages-and-import)
-8. [Inner Classes](#8-inner-classes)
-9. [Static Keyword](#9-static-keyword)
-10. [Array of Objects](#10-array-of-objects)
-11. [final Keyword](#11-final-keyword)
-12. [this Keyword](#12-this-keyword)
-13. [super Keyword](#13-super-keyword)
-14. [Exception Handling (try-catch)](#14-exception-handling-try-catch)
-15. [Summary Table](#15-summary-table)
+This README provides simple and clear Java syntax examples for common concepts like inheritance, interfaces, inner classes, method overriding, access modifiers, and more. Each topic includes a small code snippet with usage to help you understand the basics quickly.
 
 ---
 
@@ -180,7 +163,39 @@ inner.msg();
 
 ---
 
-## 9. Static Keyword
+## 9. Access Modifiers
+
+Java has four main access modifiers:
+
+* `public` — accessible from anywhere
+* `protected` — accessible within the package and subclasses
+* `default` (no modifier) — accessible within the same package only
+* `private` — accessible only within the class itself
+
+### Example:
+
+```java
+public class Person {
+    public String name;         // accessible everywhere
+    protected int age;          // accessible in package and subclasses
+    String address;             // default access (package only)
+    private String password;    // accessible only within Person class
+
+    private void showPassword() {
+        System.out.println("Password: " + password);
+    }
+}
+```
+
+---
+
+## 10. `static` Keyword
+
+`static` members belong to the class rather than any particular object.
+
+### 10.1 Static Variables
+
+* Shared by all objects of the class.
 
 ```java
 class Counter {
@@ -192,14 +207,30 @@ class Counter {
 }
 
 // Usage
-new Counter();
-new Counter();
-System.out.println(Counter.count); // Output: 2
+Counter c1 = new Counter();
+Counter c2 = new Counter();
+System.out.println(Counter.count);  // Output: 2
+```
+
+### 10.2 Static Methods
+
+* Can be called without creating an object.
+* Cannot access non-static members directly.
+
+```java
+class Utility {
+    static void greet() {
+        System.out.println("Hello, World!");
+    }
+}
+
+// Usage
+Utility.greet();
 ```
 
 ---
 
-## 10. Array of Objects
+## 11. Array of Objects
 
 ### a) Array of Objects with values in code
 
@@ -208,7 +239,6 @@ Student[] students = {
     new Student("Alice", 20),
     new Student("Bob", 22)
 };
-
 for (Student s : students) s.display();
 ```
 
@@ -227,7 +257,7 @@ for (int i = 0; i < n; i++) {
 
 ---
 
-## 11. final Keyword
+## 12. `final` Keyword
 
 ```java
 final class Constants {
@@ -241,7 +271,7 @@ System.out.println(c.PI);  // cannot change PI because it's final
 
 ---
 
-## 12. this Keyword
+## 13. `this` Keyword
 
 ```java
 class Person {
@@ -254,7 +284,9 @@ class Person {
 
 ---
 
-## 13. super Keyword
+## 14. `super` Keyword
+
+### 14.1 Accessing Superclass Method
 
 ```java
 class Animal {
@@ -265,15 +297,32 @@ class Animal {
 
 class Dog extends Animal {
     void sound() {
-        super.sound();          // call parent method
+        super.sound();  // calls Animal's sound()
         System.out.println("Dog barks");
+    }
+}
+```
+
+### 14.2 Accessing Superclass Variable
+
+```java
+class Animal {
+    String name = "Animal";
+}
+
+class Dog extends Animal {
+    String name = "Dog";
+
+    void printNames() {
+        System.out.println(name);          // prints Dog
+        System.out.println(super.name);    // prints Animal
     }
 }
 ```
 
 ---
 
-## 14. Exception Handling (try-catch)
+## 15. Exception Handling (try-catch)
 
 ```java
 try {
@@ -285,25 +334,27 @@ try {
 
 ---
 
-## 15. Summary Table
+## Summary Table
 
+| Topic              | Syntax Example                                        | Description                                 |
+| ------------------ | ----------------------------------------------------- | ------------------------------------------- |
+| Inheritance        | `class Dog extends Animal {}`                         | Class inherits another class                |
+| Interface          | `class Dog implements Animal {}`                      | Implements interface methods                |
+| Method Overriding  | `@Override void sound() {}`                           | Subclass replaces superclass method         |
+| Abstract Class     | `abstract class Animal { abstract void sound(); }`    | Abstract classes have abstract methods      |
+| Constructor        | `Person(String name) { this.name = name; }`           | Initialize object variables                 |
+| Method Overloading | `int add(int a, int b), int add(int a, int b, int c)` | Same method name, different parameters      |
+| Packages           | `package utils;` + `import utils.Helper;`             | Organize classes and import                 |
+| Inner Class        | `Outer.Inner inner = outer.new Inner();`              | Class inside another class, create object   |
+| Access Modifiers   | `public`, `private`, `protected`, `default`           | Control visibility                          |
+| Static             | `static int count; static void method()`              | Class-level variables and methods           |
+| Array of Objects   | `Student[] arr = {...}` or with input loop            | Store multiple objects                      |
+| Final              | `final int x = 10; final class C {}`                  | Constant variables or non-inheritable class |
+| This               | `this.name = name;`                                   | Refers to current object                    |
+| Super (methods)    | `super.method();`                                     | Calls parent class method                   |
+| Super (variables)  | `super.variable`                                      | Access parent class variable                |
+| Exception Handling | `try { } catch (Exception e) {}`                      | Handle runtime errors                       |
 
-
-| Topic              | Syntax Example                                        | Description                            |
-| ------------------ | ----------------------------------------------------- | -------------------------------------- |
-| Inheritance        | `class Dog extends Animal {}`                         | Class inherits another class           |
-| Interface          | `class Dog implements Animal {}`                      | Implements interface methods           |
-| Method Overriding  | `@Override void sound() {}`                           | Subclass replaces superclass method    |
-| Abstract Class     | `abstract class Animal { abstract void sound(); }`    | Abstract classes have abstract methods |
-| Constructor        | `Person(String name) { this.name = name; }`           | Initialize object variables            |
-| Method Overloading | `int add(int a, int b), int add(int a, int b, int c)` | Same method name, different params     |
-| Packages           | `package utils; + import utils.Helper;`               | Organize classes and import            |
-| Inner Class        | `Outer.Inner inner = outer.new Inner();`              | Class inside another class             |
-| Static             | `static int count;`                                   | Class-level shared variables/methods   |
-| Array of Objects   | `Student[] arr = {...} or with input loop`            | Store multiple objects                 |
-| final              | `final int x = 10; final class C {}`                  | Constant variables/non-inheritable     |
-| this               | `this.name = name;`                                   | Refers to current object               |
-| super              | `super.method();`                                     | Calls parent class method              |
-| Exception Handling | `try { } catch (Exception e) {}`                      | Handle runtime errors                  |
+---
 
 
