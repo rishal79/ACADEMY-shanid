@@ -1,7 +1,5 @@
 # Simple Java Syntax Guide with Code Examples
 
-This README provides simple and clear Java syntax examples for common concepts like inheritance, interfaces, inner classes, method overriding, access modifiers, and more. Each topic includes a small code snippet with usage to help you understand the basics quickly.
-
 ---
 
 ## 1. Inheritance (`extends`)
