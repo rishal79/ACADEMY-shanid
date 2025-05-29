@@ -1,13 +1,3 @@
-# Advanced Database Management System Lab Record
-
-**Student Name:** [Your Name]  
-**Roll Number:** [Your Roll Number]  
-**Branch:** Computer Applications  
-**Semester:** [Your Semester]  
-**Institution:** AWH Engineering College, Kozhikode  
-
----
-
 ## Lab Exercise Documentation
 
 This repository contains my solutions for the Advanced Database Management System laboratory exercises, covering both SQL and MongoDB operations as part of my coursework.
@@ -15,7 +5,7 @@ This repository contains my solutions for the Advanced Database Management Syste
 ### Exercise Structure
 
 #### **Exercise 1: Database Schema Creation**  
-**[File](./Q1.SQL):** `Q1.SQL`  
+### **[File](./Q1.SQL):** `Q1.SQL`  
 **Objectives:**
 - Create a database named `employee`
 - Design and implement three relational tables:
@@ -25,7 +15,7 @@ This repository contains my solutions for the Advanced Database Management Syste
 - Verify table structures using DESCRIBE commands
 
 #### **Exercise 2: Fundamental SQL Operations**  
-**[File](./Q2.SQL):** `Q2.SQL`  
+### **[File](./Q2.SQL):** `Q2.SQL`  
 **Objectives:**
 - Insert sample data into all tables (minimum 5 records each)
 - Implement 20 essential SQL queries including:
@@ -38,7 +28,7 @@ This repository contains my solutions for the Advanced Database Management Syste
   - Sorting results with ORDER BY
 
 #### **Exercise 3: Advanced SQL Joins**  
-**[File](./Q3.SQL):** `Q3.SQL`  
+### **[File](./Q3.SQL):** `Q3.SQL`  
 **Objectives:**
 - Perform 6 join operations between tables:
   - Display employee names with department names
@@ -49,7 +39,7 @@ This repository contains my solutions for the Advanced Database Management Syste
 - Demonstrate understanding of INNER JOIN syntax and applications
 
 #### **Exercise 4: Subquery Techniques**  
-**[File](./Q4.SQL):** `Q4.SQL`  
+### **[File](./Q4.SQL):** `Q4.SQL`  
 **Objectives:**
 - Implement 5 subquery scenarios:
   - Comparative subqueries with ALL operator
@@ -59,7 +49,7 @@ This repository contains my solutions for the Advanced Database Management Syste
   - Subqueries with aggregate functions
 
 #### **Exercise 5: MongoDB Operations**  
-**[File](./Q5.JS):** `Q5.js`  
+### **[File](./Q5.JS):** `Q5.js`  
 **Objectives:**
 - Create an `Inventory` database
 - Design a `Products` collection with complex documents containing:
