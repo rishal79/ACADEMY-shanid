@@ -1,11 +1,13 @@
-## Lab Exercise Documentation
+# 🗃️ Lab Exercise Documentation
 
-This repository contains my solutions for the Advanced Database Management System laboratory exercises, covering both SQL and MongoDB operations as part of my coursework.
+This repository contains my solutions for the **Advanced Database Management System** laboratory exercises, covering both **SQL** and **MongoDB** operations as part of my coursework.
 
-### Exercise Structure
+---
 
-#### **Exercise 1: Database Schema Creation**  
-#### **[File](./Q1.SQL):** `Q1.SQL`  
+## 📚 Exercise Structure
+
+### 📝 Exercise 1: Database Schema Creation  
+**File:** [Q1.SQL](./Q1.SQL)  
 **Objectives:**
 - Create a database named `employee`
 - Design and implement three relational tables:
@@ -14,8 +16,10 @@ This repository contains my solutions for the Advanced Database Management Syste
   - `SalaryGrade` (grade, lowsalary, highsalary)
 - Verify table structures using DESCRIBE commands
 
-#### **Exercise 2: Fundamental SQL Operations**  
-#### **[File](./Q2.SQL):** `Q2.SQL`  
+---
+
+### 📝 Exercise 2: Fundamental SQL Operations  
+**File:** [Q2.SQL](./Q2.SQL)  
 **Objectives:**
 - Insert sample data into all tables (minimum 5 records each)
 - Implement 20 essential SQL queries including:
@@ -27,8 +31,10 @@ This repository contains my solutions for the Advanced Database Management Syste
   - GROUP BY with aggregate functions (COUNT, MIN, MAX, AVG)
   - Sorting results with ORDER BY
 
-#### **Exercise 3: Advanced SQL Joins**  
-#### **[File](./Q3.SQL):** `Q3.SQL`  
+---
+
+### 📝 Exercise 3: Advanced SQL Joins  
+**File:** [Q3.SQL](./Q3.SQL)  
 **Objectives:**
 - Perform 6 join operations between tables:
   - Display employee names with department names
@@ -38,8 +44,10 @@ This repository contains my solutions for the Advanced Database Management Syste
   - Sorting joined results
 - Demonstrate understanding of INNER JOIN syntax and applications
 
-#### **Exercise 4: Subquery Techniques**  
-#### **[File](./Q4.SQL):** `Q4.SQL`  
+---
+
+### 📝 Exercise 4: Subquery Techniques  
+**File:** [Q4.SQL](./Q4.SQL)  
 **Objectives:**
 - Implement 5 subquery scenarios:
   - Comparative subqueries with ALL operator
@@ -48,8 +56,10 @@ This repository contains my solutions for the Advanced Database Management Syste
   - Identifying top earners using LIMIT
   - Subqueries with aggregate functions
 
-#### **Exercise 5: MongoDB Operations**  
-#### **[File](./Q5.JS):** `Q5.js`  
+---
+
+### 📝 Exercise 5: MongoDB Operations  
+**File:** [Q5.JS](./Q5.JS)  
 **Objectives:**
 - Create an `Inventory` database
 - Design a `Products` collection with complex documents containing:
@@ -59,15 +69,15 @@ This repository contains my solutions for the Advanced Database Management Syste
 - Implement 19 MongoDB queries including:
   - Basic document retrieval
   - Field projection
-  - Array queries ($in, $nin, $elemMatch)
+  - Array queries (`$in`, `$nin`, `$elemMatch`)
   - Nested document queries
-  - Comparison operators ($lt, $gt)
-  - Logical operators ($or, $and)
+  - Comparison operators (`$lt`, `$gt`)
+  - Logical operators (`$or`, `$and`)
   - Date-based queries
 
 ---
 
-## Technical Implementation Notes
+## ⚙️ Technical Implementation Notes
 
 ### SQL Exercises
 - Developed for MySQL/MariaDB environments
@@ -82,4 +92,3 @@ This repository contains my solutions for the Advanced Database Management Syste
 - Demonstrates array manipulation techniques
 
 ---
-
