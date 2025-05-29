@@ -13,7 +13,7 @@ Welcome to the **S2 Lab Programs Repository**! This repository contains programm
   &nbsp;&nbsp;
   <img src="https://www.svgrepo.com/show/331488/mongodb.svg" width="60" height="60" alt="MongoDB">
   &nbsp;&nbsp;
-  <img src="pngegg.png" width="60" height="60" alt="Shell Scripting">
+  <img src="./readme/pngegg.png" width="60" height="60" alt="Shell Scripting">
 </p>
 
 ---
