@@ -31,7 +31,7 @@ WHERE e.salary > 1500;
 +--------+----------+-----------+
 2 rows in set (0.00 sec)
 
-3. Produce a list showing employee's salary grade.
+3. Produce a list showing employees salary grade.
 SELECT e.ename, e.salary, s.grade
 FROM Employee e
 JOIN SalaryGrade s ON e.salary BETWEEN s.lowsalary AND s.highsalary;
