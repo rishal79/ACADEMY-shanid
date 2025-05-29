@@ -40,10 +40,10 @@ Welcome to the **S2 Lab Programs Repository**! This repository contains programm
 
 ## 📂 Repository Contents
 
-🔹  ![JAVA](./JAVA)– Core Java programs & JDBC implementations (via PuTTY)  
-🔹 ![ADBMS](./SQL) – MySQL database schemas, queries, and transactions  
-🔹 ![MongoDB](./Mongodb) – MongoDB collections, queries, and JavaScript-based database scripts  
-🔹 ![Networking](./SHELL) – Network configuration and system administration scripts  
+🔹 [JAVA](./JAVA)– Core Java programs & JDBC implementations (via PuTTY)  
+🔹 [ADBMS](./SQL) – MySQL database schemas, queries, and transactions  
+🔹 [MongoDB](./Mongodb) – MongoDB collections, queries, and JavaScript-based database scripts  
+🔹 [Networking](./SHELL) – Network configuration and system administration scripts  
 
 
 ---
