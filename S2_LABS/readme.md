@@ -40,11 +40,11 @@ Welcome to the **S2 Lab Programs Repository**! This repository contains programm
 
 ## 📂 Repository Contents
 
-🔹 **JAVA/** – Core Java programs & JDBC implementations (via PuTTY)  
-🔹 **ADBMS/** – MySQL database schemas, queries, and transactions  
-🔹 **MongoDB/** – MongoDB collections, queries, and JavaScript-based database scripts  
-🔹 **Networking/** – Network configuration and system administration scripts  
-🔹 **Docs/** – Lab records and reference materials  
+🔹  ![**JAVA/**](./JAVA)– Core Java programs & JDBC implementations (via PuTTY)  
+🔹 ![**ADBMS/**](./SQL) – MySQL database schemas, queries, and transactions  
+🔹 ![**MongoDB/**](./Mongodb) – MongoDB collections, queries, and JavaScript-based database scripts  
+🔹 ![**Networking/**](./SHELL) – Network configuration and system administration scripts  
+
 
 ---
 
@@ -80,6 +80,6 @@ mongosh
 
 ## 📌 Notes
 
-• Java programs require JDK installed on the PuTTY-connected system
-• MySQL and MongoDB credentials may be needed for ADBMS labs
+• Java programs require JDK installed on the PuTTY-connected system.<br>
+• MySQL and MongoDB credentials may be needed for ADBMS labs.<br>
 • Admin scripts may need sudo permissions (`chmod +x` and `sudo ./script.sh`)
