@@ -1,8 +1,10 @@
+EXERCISE 1
+
+1. Create a database
 CREATE DATABASE employee;
 Query OK, 1 row affected (0.01 sec)
 
-USE employee;
-
+2. Create table Employee with the following fields – empno int primary key, ename varchar(30), job varchar(10), managerid int, hiredate date, salary int, commision int, deptno int
 CREATE TABLE Employee (
     empno INT PRIMARY KEY,
     ename VARCHAR(30),
@@ -15,6 +17,7 @@ CREATE TABLE Employee (
 );
 Query OK, 0 rows affected (0.04 sec)
 
+3. Describe schema
 DESCRIBE Employee;
 +-----------+-------------+------+-----+---------+-------+
 | Field     | Type        | Null | Key | Default | Extra |
@@ -30,6 +33,7 @@ DESCRIBE Employee;
 +-----------+-------------+------+-----+---------+-------+
 8 rows in set (0.00 sec)
 
+4. Create a table Department with the following fields – deptno int primary key, deptname varchar(15), location varchar(10)
 CREATE TABLE Department (
     deptno INT PRIMARY KEY,
     deptname VARCHAR(15),
@@ -37,6 +41,7 @@ CREATE TABLE Department (
 );
 Query OK, 0 rows affected (0.02 sec)
 
+5. Describe schema
 DESCRIBE Department;
 +----------+-------------+------+-----+---------+-------+
 | Field    | Type        | Null | Key | Default | Extra |
@@ -47,6 +52,7 @@ DESCRIBE Department;
 +----------+-------------+------+-----+---------+-------+
 3 rows in set (0.00 sec)
 
+6. Create a table SalaryGrade with the following fields – grade int primary key, lowsalary int, highsalary int
 CREATE TABLE SalaryGrade (
     grade INT PRIMARY KEY,
     lowsalary INT,
@@ -54,6 +60,7 @@ CREATE TABLE SalaryGrade (
 );
 Query OK, 0 rows affected (0.02 sec)
 
+7. Describe schema
 DESCRIBE SalaryGrade;
 +------------+------+------+-----+---------+-------+
 | Field      | Type | Null | Key | Default | Extra |
