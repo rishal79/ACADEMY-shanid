@@ -52,7 +52,7 @@ sh reverse.sh file1.txt
 
 
 Output:
-vi file1.txt
+vi file1.txt.rev
 ----------------------file1.txt.rev--------------------
 This is the second line
 This is the first line
