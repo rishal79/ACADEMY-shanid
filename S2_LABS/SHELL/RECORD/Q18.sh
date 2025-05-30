@@ -40,7 +40,7 @@ This line contains the word linux
 Line without the word
 
 ----------------------------------------------------------------
-sh linux.sh file3.txt
+sh linux.sh linux file3.txt
 
 
 Output:
