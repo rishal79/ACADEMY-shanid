@@ -1,259 +1,227 @@
-# 🐍 Python Basic Syntax Cheatsheet
+# Python Cheatsheet for Beginners 🐍
 
-A beginner-friendly guide to Python syntax, built-in functions, data structures, and OOP — with GitHub-compatible formatting.
+A quick reference guide for Python fundamentals with examples.
 
----
-
-## 📝 1. Comments
-
+## 1. 💬 Comments
+```python
 # This is a single-line comment
 
 """
 This is a
 multi-line comment
 """
+```
 
+## 2. 📥📤 Input and Output
+```python
+# Output
+print("Hello, World!")  # Hello, World!
 
----
+# Input
+name = input("Enter your name: ")
+print(f"Hello, {name}!")
+```
 
-📥 2. Input and 📤 Output
+## 3. 📊 Variables and Data Types
+```python
+# Variables
+x = 10          # Integer
+y = 3.14         # Float
+name = "Alice"   # String
+is_active = True # Boolean
 
-name = input("Enter your name: ")  # Input
-print("Hello,", name)              # Output
+# Type conversion
+num_str = "10"
+num_int = int(num_str)
+```
 
+## 4. 🤔 Conditionals
+```python
+# if-elif-else
+age = 18
 
----
-
-🔢 3. Variables and Data Types
-
-x = 10              # Integer
-pi = 3.14           # Float
-name = "Alice"      # String
-is_active = True    # Boolean
-
-
----
-
-🔀 4. Conditionals
-
-age = 20
-
-if age >= 18:
-    print("Adult")
-elif age > 12:
+if age < 13:
+    print("Child")
+elif age < 18:
     print("Teen")
 else:
-    print("Child")
+    print("Adult")
 
+# Ternary operator
+status = "Adult" if age >= 18 else "Minor"
+```
 
----
-
-🔁 5. Loops
-
-While Loop
-
+## 5. 🔄 Loops
+```python
+# While loop
 count = 0
 while count < 5:
     print(count)
     count += 1
 
-For Loop
-
-for i in range(5):
+# For loop
+for i in range(5):  # 0 to 4
     print(i)
 
-Loop Control
+# Loop control
+for num in range(10):
+    if num == 3:
+        continue    # Skip iteration
+    if num == 8:
+        break       # Exit loop
+    print(num)
+```
 
-for i in range(5):
-    if i == 3:
-        break
-    if i == 1:
-        continue
-    print(i)
-
-
----
-
-📦 6. Data Structures + Built-in Methods
-
-🔹 List
-
+## 6. 🧺 Data Structures
+### List (Mutable)
+```python
 fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")     # Add item
+fruits.remove("banana")     # Remove item
+fruits[0] = "pear"          # Modify item
+```
 
-fruits.append("orange")
-fruits.insert(1, "kiwi")
-fruits.remove("banana")
-popped = fruits.pop()
-index = fruits.index("apple")
-count = fruits.count("apple")
-fruits.sort()
-fruits.reverse()
-copy_fruits = fruits.copy()
-fruits.clear()
+### Tuple (Immutable)
+```python
+colors = ("red", "green", "blue")
+# colors[0] = "yellow"  # Error! Can't modify
+```
 
-🔹 Tuple
+### Set (Unique elements)
+```python
+unique_nums = {1, 2, 3, 3}  # {1, 2, 3}
+unique_nums.add(4)
+unique_nums.remove(2)
+```
 
-numbers = (1, 2, 3, 2, 4)
+### Dictionary (Key-Value pairs)
+```python
+person = {"name": "Alice", "age": 25}
+person["age"] = 26          # Update value
+person["city"] = "New York" # Add new key-value
+del person["age"]           # Remove key
+```
 
-count = numbers.count(2)
-index = numbers.index(3)
+## 7. 📞 Functions
+```python
+# Function definition
+def greet(name="World"):
+    return f"Hello, {name}!"
 
-> ✅ Tuples are immutable
+# Function call
+message = greet("Alice")
+print(message)  # Hello, Alice!
+```
 
+## 8. ➗ Math Operators
+```python
+# Arithmetic
+a = 10 + 5   # 15 (Addition)
+b = 10 - 5   # 5 (Subtraction)
+c = 10 * 5   # 50 (Multiplication)
+d = 10 / 3   # 3.333... (Division)
+e = 10 // 3  # 3 (Floor division)
+f = 10 % 3   # 1 (Modulus)
+g = 2 ** 3   # 8 (Exponentiation)
 
+# Comparison
+5 == 5   # True
+5 != 3   # True
+5 > 3    # True
+5 <= 5   # True
+```
 
-🔹 Set
+## 9. 🎯 List Comprehension
+```python
+# Create a list of squares
+squares = [x**2 for x in range(5)]  # [0, 1, 4, 9, 16]
 
-colors = {"red", "green", "blue"}
+# With condition
+evens = [x for x in range(10) if x % 2 == 0]  # [0, 2, 4, 6, 8]
+```
 
-colors.add("yellow")
-colors.update(["black", "white"])
-colors.remove("green")
-colors.discard("pink")
-item = colors.pop()
-colors.clear()
-
-a = {1, 2, 3}
-b = {3, 4, 5}
-a.union(b)
-a.intersection(b)
-a.difference(b)
-a.symmetric_difference(b)
-
-🔹 Dictionary
-
-student = {"name": "Alice", "age": 20, "grade": "A"}
-
-value = student.get("name")
-student["age"] = 21
-student["course"] = "Math"
-removed = student.pop("grade")
-student.popitem()
-keys = student.keys()
-values = student.values()
-items = student.items()
-student.update({"age": 22, "city": "NY"})
-student.clear()
-
-
----
-
-📚 7. Functions
-
-def greet(name):
-    return f"Hello, {name}"
-
-print(greet("Shanid"))
-
-
----
-
-🧮 8. Math Operators
-
-a = 5
-b = 2
-
-print(a + b)   # Addition
-print(a - b)   # Subtraction
-print(a * b)   # Multiplication
-print(a / b)   # Division
-print(a % b)   # Modulo
-print(a ** b)  # Power
-print(a // b)  # Floor Division
-
-
----
-
-📋 9. List Comprehension
-
-squares = [x**2 for x in range(5)]
-print(squares)
-
-
----
-
-🧰 10. Modules
-
+## 10. 📦 Modules
+```python
 import math
-print(math.sqrt(16))
+from datetime import date
 
-from datetime import datetime
-print(datetime.now())
+# Using math module
+print(math.sqrt(16))  # 4.0
 
+# Using datetime
+today = date.today()
+print(today)  # YYYY-MM-DD
+```
 
----
-
-❗ 11. Exception Handling
-
+## 11. 🚨 Exception Handling
+```python
 try:
-    x = 10 / 0
+    result = 10 / 0
 except ZeroDivisionError:
     print("Cannot divide by zero!")
+except Exception as e:
+    print(f"An error occurred: {e}")
+else:
+    print("No errors!")
 finally:
-    print("Done")
+    print("This always runs")
+```
 
-
----
-
-👨‍💻 12. Object-Oriented Programming (OOP)
-
-🔸 Class and Object
-
-class Person:
+## 12. 🧩 Object-Oriented Programming (OOP)
+### Class and Object
+```python
+class Dog:
+    # Constructor
     def __init__(self, name):
-        self.name = name
+        self.name = name  # Instance variable
+    
+    # Method
+    def bark(self):
+        print(f"{self.name} says woof!")
 
-    def greet(self):
-        print("Hello,", self.name)
+# Create object
+my_dog = Dog("Buddy")
+my_dog.bark()  # Buddy says woof!
+```
 
-p = Person("Alice")
-p.greet()
+### Inheritance
+```python
+class Labrador(Dog):  # Inherits from Dog
+    def swim(self):
+        print(f"{self.name} is swimming!")
 
-🔸 Inheritance
+my_lab = Labrador("Max")
+my_lab.bark()  # Inherited method
+my_lab.swim()  # New method
+```
 
-class Animal:
-    def speak(self):
-        print("Animal speaks")
-
-class Dog(Animal):
-    def speak(self):
-        print("Dog barks")
-
-d = Dog()
-d.speak()
-
-🔸 Encapsulation
-
-class Car:
+### Encapsulation
+```python
+class BankAccount:
     def __init__(self):
-        self.__speed = 0   # Private variable
+        self.__balance = 0  # Private variable
+    
+    def deposit(self, amount):
+        self.__balance += amount
+    
+    def get_balance(self):
+        return self.__balance
+```
 
-    def set_speed(self, speed):
-        self.__speed = speed
+### Polymorphism
+```python
+class Cat:
+    def speak(self):
+        print("Meow")
 
-    def get_speed(self):
-        return self.__speed
+class Duck:
+    def speak(self):
+        print("Quack")
 
-c = Car()
-c.set_speed(60)
-print(c.get_speed())
-
-🔸 Polymorphism
-
-class Bird:
-    def sound(self):
-        print("Some sound")
-
-class Sparrow(Bird):
-    def sound(self):
-        print("Chirp")
-
-class Parrot(Bird):
-    def sound(self):
-        print("Squawk")
-
-for bird in (Sparrow(), Parrot()):
-    bird.sound()
-
+# Same method name, different behavior
+animals = [Cat(), Duck()]
+for animal in animals:
+    animal.speak()
+```
 
 ---
