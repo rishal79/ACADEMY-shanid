@@ -5,7 +5,7 @@ A beginner-friendly guide to Python syntax, built-in functions, data structures,
 ---
 
 ## 📝 1. Comments
-```python
+
 # This is a single-line comment
 
 """
