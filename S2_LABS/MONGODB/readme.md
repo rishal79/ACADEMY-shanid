@@ -5,9 +5,6 @@
 ### Use a Database
 ```shell
 use databasename
-
-
-### Show All Databases
 show dbs
 ```
 
