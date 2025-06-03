@@ -1,131 +1,144 @@
 # MongoDB Syntax Cheat Sheet
 
----
+## Database Operations
 
-## 🛠️ Database Operations
-
-### Create / Use a Database
-```js
+### Use a Database
+```shell
 use databasename
 
-Show All Databases
 
+### Show All Databases
+```shell
 show dbs
+```
 
-Show Current Database
-
+### Show Current Database
+```shell
 db
+```
 
-Show All Collections
-
+### Show All Collections
+```shell
 show collections
+```
 
+## Insert Documents
 
----
-
-📦 Insert Documents
-
-Insert One Document
-
+### Insert One Document
+```javascript
 db.collection.insertOne({ field1: value1, field2: value2 })
+```
 
-Insert Multiple Documents
-
+### Insert Multiple Documents
+```javascript
 db.collection.insertMany([
   { field1: value1, field2: value2 },
   { field1: value3, field2: value4 }
 ])
+```
 
+## Read/Query Documents
 
----
-
-🔍 Read / Query Documents
-
-Find All Documents
-
+### Find All Documents
+```javascript
 db.collection.find()
+```
 
-Find with Filter
-
+### Find with Filter
+```javascript
 db.collection.find({ field: value })
+```
 
-Find with Projection (specific fields)
-
+### Find with Projection
+```javascript
 db.collection.find({ field: value }, { field1: 1, field2: 1 })
+```
 
-Sort Results
+### Sorting
+```javascript
+// Ascending
+db.collection.find().sort({ field: 1 })
 
-db.collection.find().sort({ field: 1 })    // Ascending
-db.collection.find().sort({ field: -1 })   // Descending
+// Descending
+db.collection.find().sort({ field: -1 })
+```
 
-Find with Comparison Operators
+### Comparison Operators
+```javascript
+// Not equal
+db.collection.find({ field: { $ne: value } })
 
-db.collection.find({ field: { $ne: value } })   // Not equal
-db.collection.find({ field: { $gt: value } })   // Greater than
-db.collection.find({ field: { $lt: value } })   // Less than
-db.collection.find({ field: { $gte: value } })  // Greater than or equal
-db.collection.find({ field: { $lte: value } })  // Less than or equal
+// Greater than
+db.collection.find({ field: { $gt: value } })
 
+// Less than
+db.collection.find({ field: { $lt: value } })
 
----
+// Greater than or equal
+db.collection.find({ field: { $gte: value } })
 
-🧾 Update Documents
+// Less than or equal
+db.collection.find({ field: { $lte: value } })
+```
 
-Update One Document
+## Update Documents
 
+### Update One Document
+```javascript
 db.collection.updateOne(
   { field: value },
   { $set: { fieldToUpdate: newValue } }
 )
+```
 
-Update Multiple Documents
-
+### Update Many Documents
+```javascript
 db.collection.updateMany(
   { field: value },
   { $set: { fieldToUpdate: newValue } }
 )
+```
 
+## Delete Documents
 
----
-
-❌ Delete Documents
-
-Delete One Document
-
+### Delete One Document
+```javascript
 db.collection.deleteOne({ field: value })
+```
 
-Delete Multiple Documents
-
+### Delete Many Documents
+```javascript
 db.collection.deleteMany({ field: value })
+```
 
+## Aggregation
 
----
-
-🔢 Aggregation (Basics)
-
-Count Documents
-
+### Count Documents
+```javascript
 db.collection.countDocuments({ field: value })
+```
 
-Group and Aggregate
-
+### Group and Aggregate
+```javascript
 db.collection.aggregate([
   { $group: { _id: "$field", total: { $sum: 1 } } }
 ])
+```
 
+## Indexing
 
----
+### Create Index
+```javascript
+// Ascending
+db.collection.createIndex({ field: 1 })
 
-🧮 Indexing
+// Descending
+db.collection.createIndex({ field: -1 })
+```
 
-Create Index
-
-db.collection.createIndex({ field: 1 })    // Ascending
-db.collection.createIndex({ field: -1 })   // Descending
-
-Drop Index
-
+### Drop Index
+```javascript
 db.collection.dropIndex({ field: 1 })
-
+```
 
 ---
