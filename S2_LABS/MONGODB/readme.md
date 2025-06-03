@@ -8,7 +8,6 @@ use databasename
 
 
 ### Show All Databases
-```shell
 show dbs
 ```
 
