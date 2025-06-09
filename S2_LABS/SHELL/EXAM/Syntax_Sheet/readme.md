@@ -54,7 +54,7 @@
 | `-a`     | AND          | Inside `[ ]`                           | `[ $a -gt 5 -a $b -lt 10 ]`           |
 | `-o`     | OR           | Inside `[ ]`                           | `[ $a -lt 5 -o $b -gt 10 ]`           |
 | `&&`     | AND          | Outside `[ ]` / `[[ ]]` (command comb) | `[[ $a -gt 5 ]] && echo "ok"`          |
-| `||`     | OR           | Outside `[ ]` / `[[ ]]` (command comb) | `[[ $a -lt 5 ]] || echo "no"`          |
+| ` || `     | OR           | Outside `[ ]` / `[[ ]]` (command comb) | `[[ $a -lt 5 ]] || echo "no"`          |
 
 - `-a` and `-o` combine conditions **inside** `[ ]`.
 - `&&` and `||` combine commands or tests **outside** brackets.
