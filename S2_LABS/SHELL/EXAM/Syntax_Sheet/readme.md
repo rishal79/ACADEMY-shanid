@@ -147,8 +147,8 @@ fi
 | `=~`     | Regex match       | `[[ $str =~ regex ]]`        | `[[ ]]` only, Bash regex match     |                 |   |                 |                       |
 | `-a`     | AND logical       | `[ cond1 -a cond2 ]`         | Inside `[ ]` only                  |                 |   |                 |                       |
 | `-o`     | OR logical        | `[ cond1 -o cond2 ]`         | Inside `[ ]` only                  |                 |   |                 |                       |
-| `&&`     | AND logical cmd   | `[[ cond1 ]] && [[ cond2 ]]` | Outside test brackets              |                 |   |                 |                       |
-| \`       |                   | \`                           | OR logical cmd                     | \`\[\[ cond1 ]] |   | \[\[ cond2 ]]\` | Outside test brackets |
+| `&&`     | AND logical cmd   | `[[ cond1 ]] && [[ cond2 ]]` | Outside test brackets              |                 |   |                 |                       
+
 
 ---
 
