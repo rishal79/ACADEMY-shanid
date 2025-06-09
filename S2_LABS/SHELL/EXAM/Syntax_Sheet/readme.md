@@ -49,12 +49,12 @@
 
 ## 3. Logical Operators: `-a` & `&&`, `-o` & `||`
 
-| Operator | Meaning      | Used inside or outside `[ ]` / `[[ ]]` | Example                                |
-|----------|--------------|----------------------------------------|---------------------------------------|
-| `-a`     | AND          | Inside `[ ]`                           | `[ $a -gt 5 -a $b -lt 10 ]`           |
-| `-o`     | OR           | Inside `[ ]`                           | `[ $a -lt 5 -o $b -gt 10 ]`           |
-| `&&`     | AND          | Outside `[ ]` / `[[ ]]` (command comb) | `[[ $a -gt 5 ]] && echo "ok"`          |
-| `||`     | OR           | Outside `[ ]` / `[[ ]]` (command comb) | `[[ $a -lt 5 ]] || echo "no"`          |
+| Operator | Meaning      | Used inside or outside `[ ]` / `[[ ]]` | Example                                  |
+|----------|--------------|----------------------------------------|-----------------------------------------|
+| `-a`     | AND          | Inside `[ ]`                           | `[ $a -gt 5 -a $b -lt 10 ]`             |
+| `-o`     | OR           | Inside `[ ]`                           | `[ $a -lt 5 -o $b -gt 10 ]`             |
+| `&&`     | AND          | Outside `[ ]` / `[[ ]]` (command comb) | `[[ $a -gt 5 ]] && echo "ok"`            |
+| &#124;&#124; | OR        | Outside `[ ]` / `[[ ]]` (command comb) | `[[ $a -lt 5 ]] &#124;&#124; echo "no"` |
 
 
 - `-a` and `-o` combine conditions **inside** `[ ]`.
