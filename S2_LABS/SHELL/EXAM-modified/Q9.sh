@@ -1,4 +1,4 @@
-if [ $# -ne 1 || -f $1 ]
+if [ $# -ne 1 || -d $1 ]
 then
 	echo "Syntax is $0 filename"
 	exit 1
