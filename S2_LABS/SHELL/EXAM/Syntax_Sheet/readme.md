@@ -132,22 +132,22 @@ fi
 
 ## Summary Table
 
-| Operator | Type              | Usage                        | Notes                              |                 |   |                 |                       |
-| -------- | ----------------- | ---------------------------- | ---------------------------------- | --------------- | - | --------------- | --------------------- |
-| `-eq`    | Numeric equals    | `[ "$a" -eq "$b" ]`          | Numbers only                       |                 |   |                 |                       |
-| `-ne`    | Numeric not equal | `[ "$a" -ne "$b" ]`          | Numbers only                       |                 |   |                 |                       |
-| `==`     | String equals     | `[[ $str == "value" ]]`      | Strings only, safer inside `[[ ]]` |                 |   |                 |                       |
-| `!=`     | String not equal  | `[ "$str" != "value" ]`      | Works in both `[ ]` and `[[ ]]`    |                 |   |                 |                       |
-| `<`      | String less than  | `[[ $str1 < $str2 ]]`        | Strings only, `[[ ]]` only         |                 |   |                 |                       |
-| `>`      | String greater    | `[[ $str1 > $str2 ]]`        | Strings only, `[[ ]]` only         |                 |   |                 |                       |
-| `-lt`    | Numeric less than | `[ "$a" -lt "$b" ]`          | Numbers only                       |                 |   |                 |                       |
-| `-gt`    | Numeric greater   | `[ "$a" -gt "$b" ]`          | Numbers only                       |                 |   |                 |                       |
-| `-le`    | Numeric ≤         | `[ "$a" -le "$b" ]`          | Numbers only                       |                 |   |                 |                       |
-| `-ge`    | Numeric ≥         | `[ "$a" -ge "$b" ]`          | Numbers only                       |                 |   |                 |                       |
-| `=~`     | Regex match       | `[[ $str =~ regex ]]`        | `[[ ]]` only, Bash regex match     |                 |   |                 |                       |
-| `-a`     | AND logical       | `[ cond1 -a cond2 ]`         | Inside `[ ]` only                  |                 |   |                 |                       |
-| `-o`     | OR logical        | `[ cond1 -o cond2 ]`         | Inside `[ ]` only                  |                 |   |                 |                       |
-| `&&`     | AND logical cmd   | `[[ cond1 ]] && [[ cond2 ]]` | Outside test brackets              |                 |   |                 |                       
+| Operator | Type              | Usage                        | Notes                          |
+| -------- | ----------------- | ---------------------------- | ------------------------------ |
+| `-eq`    | Numeric equals    | `[ "$a" -eq "$b" ]`          | Numbers only                   |
+| `-ne`    | Numeric not equal | `[ "$a" -ne "$b" ]`          | Numbers only                   |
+| `==`     | String equals     | `[[ $str == "value" ]]`      | Strings only, safer inside `[[ ]]` |
+| `!=`     | String not equal  | `[ "$str" != "value" ]`      | Works in both `[ ]` and `[[ ]]`|
+| `<`      | String less than  | `[[ $str1 < $str2 ]]`        | Strings only, `[[ ]]` only     |
+| `>`      | String greater    | `[[ $str1 > $str2 ]]`        | Strings only, `[[ ]]` only     |
+| `-lt`    | Numeric less than | `[ "$a" -lt "$b" ]`          | Numbers only                   |
+| `-gt`    | Numeric greater   | `[ "$a" -gt "$b" ]`          | Numbers only                   |
+| `-le`    | Numeric ≤         | `[ "$a" -le "$b" ]`          | Numbers only                   |
+| `-ge`    | Numeric ≥         | `[ "$a" -ge "$b" ]`          | Numbers only                   |
+| `=~`     | Regex match       | `[[ $str =~ regex ]]`        | `[[ ]]` only, Bash regex match |
+| `-a`     | AND logical       | `[ cond1 -a cond2 ]`         | Inside `[ ]` only              |
+| `-o`     | OR logical        | `[ cond1 -o cond2 ]`         | Inside `[ ]` only              |
+| `&&`     | AND logical cmd   | `[[ cond1 ]] && [[ cond2 ]]` | Outside test brackets          |
 
 
 ---
