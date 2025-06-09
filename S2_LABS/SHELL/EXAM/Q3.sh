@@ -1,5 +1,4 @@
-
-
+Q) Write a shell script using command line to check if the triangle is equilateral, isosceles, or scalene.
 
 
 Code:
